@@ -240,6 +240,10 @@ class Application(tk.Frame):
         # self.butt_mus['text'] = song[1]
         # self.butt_tone['text'] = f'{cind+1}/{len(song[0])} - {song[0][cind]}'
 
+    def on_closing(self):
+        self.manager.running = False
+        self.master.destroy()
+
 
     # def create_button(self, text='', command=None, side='right'):
     #     butt = tk.Button(self)
@@ -253,4 +257,5 @@ class Application(tk.Frame):
         
 root = tk.Tk()
 app = Application(master=root)
+app.master.protocol("WM_DELETE_WINDOW", app.on_closing)
 app.mainloop()
