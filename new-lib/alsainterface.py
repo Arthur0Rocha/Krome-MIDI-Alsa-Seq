@@ -162,12 +162,12 @@ class ManagerStatus:
                 evtype = ev[0]
                 evdata = ev[7]
                 if evtype == 10 and evdata[4] == 82 and evdata[5] == 127:
-                    self.getNextTone()
+                    self.setNextTone()
                     self.requestSystemUpdate()
                 elif evtype == 10 and evdata[4] >= 26 and evdata[4] <= 29:
                     managePM(evdata[4]-25, evdata[5])
                 elif evtype == 10 and evdata[4] == 4:
-                    print('Pedal', evdata) # managePedal()
+                    alsaseq.output( (10, 0, 0, 253, (0,0), ev[6], ev[5], (0, 0, 0, 0, 2, ev[7][5])) )
                 elif evtype == 12:
-                    print('AT', evdata) # manageAftertouch()
+                    alsaseq.output( (10, 0, 0, 253, (0,0), ev[6], ev[5], (0, 0, 0, 0, 1, ev[7][5])) )
 

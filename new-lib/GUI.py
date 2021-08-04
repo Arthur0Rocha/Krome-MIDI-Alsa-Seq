@@ -17,7 +17,7 @@ class Application(tk.Frame):
     def create_widgets(self, commands):
 
         centralWidth = 20
-        lateralWidth = 15
+        lateralWidth = 7
         
         self.master.title("Tone Manager")
 
@@ -32,24 +32,24 @@ class Application(tk.Frame):
         self.rowconfigure(1, pad=3)
         self.rowconfigure(2, pad=3)
         
-        bps = Button(self, text="Música Anterior", command=commands[0], width=lateralWidth)
+        bps = Button(self, text="<<<", command=commands[0], width=lateralWidth)
         bps.grid(row=0, column=0)
         self.songTitle = Button(self, text="Nome da Música", width=centralWidth)
         self.songTitle.grid(row=0, column=1)
-        bns = Button(self, text="Próxima Música", command=commands[1], width=lateralWidth)
+        bns = Button(self, text=">>>", command=commands[1], width=lateralWidth)
         bns.grid(row=0, column=2)
         
-        bpt = Button(self, text="Timbre Anterior", command=commands[2], width=lateralWidth)
+        bpt = Button(self, text="<", command=commands[2], width=lateralWidth)
         bpt.grid(row=1, column=0)
         self.toneCode = Button(self, text="Código do Timbre")
         self.toneCode.grid(row=1, column=1)
-        bnt = Button(self, text="Próximo Timbre", command=commands[3], width=lateralWidth)
+        bnt = Button(self, text=">", command=commands[3], width=lateralWidth)
         bnt.grid(row=1, column=2)
 
-        bat = Button(self, text="AfterTouch", command=None, width=lateralWidth)
+        bat = Button(self, text="ATC", command=None, width=lateralWidth)
         bat.grid(row=2, column=0)
         
-        bpe = Button(self, text="Pedal", command=None, width=lateralWidth)
+        bpe = Button(self, text="PED", command=None, width=lateralWidth)
         bpe.grid(row=2, column=2)
 
         self.pack()
