@@ -3,10 +3,10 @@ from GUI import Application
 from CLI import KeyboardManager
 from threadslib import GeneralThread
 
-from songs import refugio
+from songs import ensaio
 
 def main():
-    manager = SongManager(songs=refugio)
+    manager = SongManager(songs=ensaio)
 
     commandsCLI = [manager.nextSong, manager.previousSong, manager.reset, manager.setSong]
     CLI = KeyboardManager(commands=commandsCLI)

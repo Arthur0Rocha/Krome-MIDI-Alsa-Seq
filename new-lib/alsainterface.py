@@ -166,6 +166,8 @@ class ManagerStatus:
                     self.requestSystemUpdate()
                 elif evtype == 10 and evdata[4] >= 26 and evdata[4] <= 29:
                     managePM(evdata[4]-25, evdata[5])
-                # elif evtype == 12:
-                #     print(ev)
+                elif evtype == 10 and evdata[4] == 4:
+                    print('Pedal', evdata) # managePedal()
+                elif evtype == 12:
+                    print('AT', evdata) # manageAftertouch()
 
