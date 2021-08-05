@@ -27,7 +27,7 @@ ensaio = [
     (['CD018'], 'The final countdown'), # 08
     (['CD025'], 'Maniac'), # 09
     (['PF001', 'CD029'], 'Heaven and hell'), # 10
-    (['CD001PM'], 'Zombie'), # 11
+    (['CD001PM', 'CD001MP', 'CD001MM'], 'Zombie'), # 11
     (['PF007'], 'Separate ways'), # 12
     (['PF007'], 'Jump'), # 13
     (['CD026'], 'Take on me'), # 14
