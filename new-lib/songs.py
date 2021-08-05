@@ -20,7 +20,7 @@ ensaio = [
     (['PF000'], 'Jeremy'), # 01
     (['PF011', 'CD029'], 'Man in the box'), # 02
     (['PF000'], 'Machinehead'), # 03 
-    (['PF001', 'PF003', 'PF004', 'PF001', 'PF004', 'PF003', 'PF004', 'PF000', 'PF003'], 'Don\'t speak'), # 04
+    (['PF001', 'PF003', 'PF004', 'PF000'], 'Don\'t speak'), # 04
     (['CD020', 'PD084'], 'It\'s my life'), # 05
     (['PF001', 'PA020'], 'Toxicity'), # 06
     (['PF008', 'PF000'], 'Love ain\'t no stranger'), # 07

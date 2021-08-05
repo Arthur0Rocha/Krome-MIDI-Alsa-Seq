@@ -34,6 +34,10 @@ class SongManager:
         self.status.setPreviousTone()
         self.runCallbacks()
 
+    def setTone(self, n):
+        self.status.setTone(n)
+        self.runCallbacks()
+
     def reset(self):
         self.status.resetState()
         self.runCallbacks()
@@ -41,6 +45,35 @@ class SongManager:
     def setSong(self, song):
         self.status.setSong(song)
         self.runCallbacks()
+
+    def toggleAT(self):
+        self.status.toggleAT()
+        self.runCallbacks()
+
+    def togglePedal(self):
+        self.status.togglePedal()
+        self.runCallbacks()
+
+    def getCLICommands(self):
+        return [self.nextSong, self.previousSong, self.reset, self.setSong]
+
+    def getGUICommands(self):
+        return [self.previousSong, 
+                self.nextSong, 
+                self.toggleAT, 
+                self.togglePedal, 
+                self.nextTone, 
+                lambda: self.setTone(0),
+                lambda: self.setTone(1),
+                lambda: self.setTone(2),
+                lambda: self.setTone(3)
+                ]
+
+    def initializeCallbacks(self, cbks):
+        for cbk in cbks:
+            self.assignCallback(cbk)
+        self.runCallbacks()
+
 
     def on_closing(self):
         self.status.on_closing()

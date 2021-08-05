@@ -82,7 +82,9 @@ class ManagerStatus:
                     self.getNextTone(),
                     self.getPreviousTone(),
                     self.currentTone,
-                    len(self.songs[self.currentSong][0])
+                    self.songs[self.currentSong][0],
+                    self.getPedal(),
+                    self.getAT()
                 ]
 
     def setNextSong(self):
@@ -117,9 +119,18 @@ class ManagerStatus:
             self.currentTone = len(self.songs[self.currentSong][0]) - 1
         self.sendUpdateCommand()
 
+    def setTone(self, n):
+        if n >= len(self.songs[self.currentSong][0]):
+            return
+        self.forceCommandChange = [True, True]
+        self.currentTone = n
+        self.sendUpdateCommand()
+
     def resetState(self):
         self.currentSong = 0
         self.currentTone = 0
+        self.pedalCC = 2
+        self.ATCC = 1
         self.forceCommandChange = [True, True]
         self.sendUpdateCommand()
 
@@ -129,6 +140,56 @@ class ManagerStatus:
             self.currentTone = 0
             self.forceCommandChange = [True, True]
             self.sendUpdateCommand()
+
+    def handlePedal(self, val, src, dest):
+        if self.pedalCC < 0:
+            return
+        alsaseq.output( (10, 0, 0, 253, (0,0), src, dest, (0, 0, 0, 0, self.pedalCC, val)) )
+
+    def handleAT(self, val, src, dest):
+        if self.ATCC < 0:
+            return
+        alsaseq.output( (10, 0, 0, 253, (0,0), src, dest, (0, 0, 0, 0, self.ATCC, val)) )
+
+    def togglePedal(self):
+        if self.pedalCC == -1:
+            self.pedalCC = 1
+        elif self.pedalCC == 1:
+            self.pedalCC = 2
+        elif self.pedalCC == 2:
+            self.pedalCC = 7
+        elif self.pedalCC == 7:
+            self.pedalCC = -1
+
+    def toggleAT(self):
+        if self.ATCC == -1:
+            self.ATCC = 1
+        elif self.ATCC == 1:
+            self.ATCC = 2
+        elif self.ATCC == 2:
+            self.ATCC = 7
+        elif self.ATCC == 7:
+            self.ATCC = -1
+
+    def getPedal(self):
+        if self.pedalCC == -1:
+            return ''
+        elif self.pedalCC == 1:
+            return '+Y'
+        elif self.pedalCC == 2:
+            return '-Y'
+        elif self.pedalCC == 7:
+            return 'VOL'
+
+    def getAT(self):
+        if self.ATCC == -1:
+            return ''
+        elif self.ATCC == 1:
+            return '+Y'
+        elif self.ATCC == 2:
+            return '-Y'
+        elif self.ATCC == 7:
+            return 'VOL'
 
     def sendUpdateCommand(self):
         tone = self.getCurrentTone()
@@ -167,7 +228,7 @@ class ManagerStatus:
                 elif evtype == 10 and evdata[4] >= 26 and evdata[4] <= 29:
                     managePM(evdata[4]-25, evdata[5])
                 elif evtype == 10 and evdata[4] == 4:
-                    alsaseq.output( (10, 0, 0, 253, (0,0), ev[6], ev[5], (0, 0, 0, 0, 2, ev[7][5])) )
+                    self.handlePedal(ev[7][5], ev[6], ev[5])
                 elif evtype == 12:
-                    alsaseq.output( (10, 0, 0, 253, (0,0), ev[6], ev[5], (0, 0, 0, 0, 1, ev[7][5])) )
+                    self.handleAT(ev[7][5], ev[6], ev[5])
 
