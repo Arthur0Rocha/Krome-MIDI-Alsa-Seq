@@ -22,7 +22,14 @@ def changeBankTone(bank, tone):
         createMIDIfile(fname, bank, tone)
     aplaymidi(fname)
 
-def managePM(channel, value):
+def handlePMstate(pmStr):
+    for i, c in enumerate(pmStr):
+        if c == 'P':
+            sendPM(i+1, 127)
+        elif c == 'M':
+            sendPM(i+1, 0)
+
+def sendPM(channel, value):
     aplaymidi(f'midi-files/MIDI.{channel}.{127 if value > 0 else 1}.MID')
 
 class ManagerStatus:
@@ -141,6 +148,10 @@ class ManagerStatus:
             self.forceCommandChange = [True, True]
             self.sendUpdateCommand()
 
+    def handleSW(self):
+        self.setNextTone()
+        self.requestSystemUpdate()
+
     def handlePedal(self, val, src, dest):
         if self.pedalCC < 0:
             return
@@ -150,6 +161,10 @@ class ManagerStatus:
         if self.ATCC < 0:
             return
         alsaseq.output( (10, 0, 0, 253, (0,0), src, dest, (0, 0, 0, 0, self.ATCC, val)) )
+
+    def handleCCSetTone(self, channel):
+        self.setTone(channel)
+        self.requestSystemUpdate()
 
     def togglePedal(self):
         if self.pedalCC == -1:
@@ -193,26 +208,24 @@ class ManagerStatus:
 
     def sendUpdateCommand(self):
         tone = self.getCurrentTone()
-        CP = tone[0]
+        toneCP = tone[0]
+        toneBank = tone[1]
+        toneNumber = tone[2:5]
 
         if self.forceCommandChange[0]:
-            if CP == 'C':
+            if toneCP == 'C':
                 aplaymidi('midi-files/COMBI.MID')
-            elif CP == 'P':
+            elif toneCP == 'P':
                 aplaymidi('midi-files/PROGRAM.MID')
 
         if self.forceCommandChange[1]:        
-            bank = {'A': 0, 'B': 1, 'C': 2, 'D': 3, 'E': 4, 'F': 5}[tone[1]]
-            changeBankTone(bank, int(tone[2:5]))
+            bank = {'A': 0, 'B': 1, 'C': 2, 'D': 3, 'E': 4, 'F': 5}[toneBank]
+            changeBankTone(bank, int(toneNumber))
         
         if len(tone) > 5:
-            modifiers = tone[5:]
-            for i, char in enumerate(modifiers):
-                if char == 'P':
-                    managePM(i+1, 127)
-                elif char == 'M':
-                    managePM(i+1, 0)
-
+            modifiersPM = tone[5:]
+            handlePMstate(modifiersPM)
+            
     def on_closing(self):
         self.running = False
 
@@ -223,10 +236,9 @@ class ManagerStatus:
                 evtype = ev[0]
                 evdata = ev[7]
                 if evtype == 10 and evdata[4] == 82 and evdata[5] == 127:
-                    self.setNextTone()
-                    self.requestSystemUpdate()
-                elif evtype == 10 and evdata[4] >= 26 and evdata[4] <= 29:
-                    managePM(evdata[4]-25, evdata[5])
+                    self.handleSW()
+                elif evtype == 10 and evdata[4] >= 26 and evdata[4] <= 29 and evdata[5] == 127:
+                    self.handleCCSetTone(evdata[4]-26)
                 elif evtype == 10 and evdata[4] == 4:
                     self.handlePedal(ev[7][5], ev[6], ev[5])
                 elif evtype == 12:
