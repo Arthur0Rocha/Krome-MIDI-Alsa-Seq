@@ -126,10 +126,18 @@ class ManagerStatus:
             self.currentTone = len(self.songs[self.currentSong][0]) - 1
         self.sendUpdateCommand()
 
-    def setTone(self, n):
+    def setTone(self, n, preventCut=False):
         if n >= len(self.songs[self.currentSong][0]):
             return
-        self.forceCommandChange = [True, True]
+        ctone = self.getCurrentTone()
+        ntone = self.songs[self.currentSong][0][n]
+        if not preventCut or ctone == ntone:
+            self.forceCommandChange = [True, True]
+        elif ctone[:5] == ntone[:5]:
+            self.forceCommandChange = [False, False]
+        else:
+            self.forceCommandChange = [ctone[0] != ntone[0], ctone[:5] != ntone[:5]]
+        
         self.currentTone = n
         self.sendUpdateCommand()
 
@@ -162,8 +170,8 @@ class ManagerStatus:
             return
         alsaseq.output( (10, 0, 0, 253, (0,0), src, dest, (0, 0, 0, 0, self.ATCC, val)) )
 
-    def handleCCSetTone(self, channel):
-        self.setTone(channel)
+    def handleCCSetTone(self, channel, preventCut=False):
+        self.setTone(channel, preventCut=preventCut)
         self.requestSystemUpdate()
 
     def togglePedal(self):
@@ -238,7 +246,7 @@ class ManagerStatus:
                 if evtype == 10 and evdata[4] == 82 and evdata[5] == 127:
                     self.handleSW()
                 elif evtype == 10 and evdata[4] >= 26 and evdata[4] <= 29 and evdata[5] == 127:
-                    self.handleCCSetTone(evdata[4]-26)
+                    self.handleCCSetTone(evdata[4]-26, preventCut=True)
                 elif evtype == 10 and evdata[4] == 4:
                     self.handlePedal(ev[7][5], ev[6], ev[5])
                 elif evtype == 12:
