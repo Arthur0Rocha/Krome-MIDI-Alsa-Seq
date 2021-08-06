@@ -1,8 +1,8 @@
 import alsaseq
 import os
 
-def aplaymidi(filename):
-    os.system(f'aplaymidi -p KROME -d 0 {filename}')
+def aplaymidi(filename, delay=0):
+    os.system(f'aplaymidi -p KROME -d {delay} {filename}')
 
 def aconnect(dev1, dev2):
     os.system(f'aconnect {dev1} {dev2}')
