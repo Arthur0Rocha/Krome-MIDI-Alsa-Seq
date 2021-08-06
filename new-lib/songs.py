@@ -33,5 +33,6 @@ ensaio = [
     (['CD026'], 'Take on me'), # 14
     (['CD027'], 'I don\'t want to miss a thing'), # 15
     (['CD022PPP', 'CD022PMP'], 'Perfect strangers'), # 16
-    (['PF005'], 'Radio gaga')  # 17
+    (['PF005'], 'Radio gaga'),  # 17
+    (['CD001PM', 'PF001'], 'Bring me to life')
 ]
