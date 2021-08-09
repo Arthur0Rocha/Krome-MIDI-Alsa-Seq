@@ -8,19 +8,19 @@ refugio = [
     (['PF001', 'CD001'], 'Toxicity'), # 07
     (['PF008', 'PF000'], 'Love ain\'t no...'), # 08
     (['PF003'], 'Highway to hell'), # 09
-    (['PF008', 'PF006', 'PF001', 'PF000'], 'Tears of the dragon'), # 10
-    (['PD057', 'PF000'], 'The evil that men do'), # 11
-    (['CD018'], 'The final countdown'), # 12
+    (['PF008', 'PF006', 'PF001', 'PF000'], 'Tears of the d...'), # 10
+    (['PD057', 'PF000'], 'The evil that...'), # 11
+    (['CD018'], 'The final count...'), # 12
     (['CD025'], 'Maniac'), # 13
     (['PF000'], 'Breaking the law'), # 14
     (['CD000', 'PF015'], 'I want out'), # 15
     (['PF001', 'CD029', 'PF003'], 'Heaven and hell'), # 16
     (['CD001PM', 'CD001PP'], 'Zombie'), # 17
     (['CD026'], 'Take on me'), # 18
-    (['CD027'], 'I don\'t wanna miss...'), # 19
+    (['CD027'], 'I don\'t wanna m...'), # 19
     (['PF007'], 'Separate ways'), # 20
-    (['PF001', 'CD000'], 'Nothing else matters'), # 21
-    (['CD031'], 'Everybody wants to...'), # 22 
+    (['PF001', 'CD000'], 'Nothing else m...'), # 21
+    (['CD031'], 'Everybody wants...'), # 22 
     (['CD028', 'CD001PM', 'PA020'], 'Numb'), # 23 
     (['PF007'], 'Jump'), # 24
     (['PF001', 'CD001PM', 'PF000'], 'Wasting love'), # 25
@@ -29,7 +29,7 @@ refugio = [
     (['CD001PM', 'CD001PP'], 'My immortal'), # 28
     (['CD021'], 'Going under'), # 29
     (['PF008', 'PF001', 'CD029'], 'Teto de vidro'), # 30 TODO
-    (['PF001'], 'Admirável chip novo'), # 31
+    (['PF001'], 'Admirável chip...'), # 31
     (['CD006', 'PF000', 'PF003'], 'Equalize'), # 32
     (['PF000'], 'Pulsos'), # 33
     (['CD029', 'PF001'], 'Everybody\'s fool'), # 34
