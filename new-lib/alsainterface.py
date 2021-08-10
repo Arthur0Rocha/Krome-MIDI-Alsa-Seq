@@ -95,7 +95,7 @@ class ManagerStatus:
                 ]
 
     def setNextSong(self):
-        self.forceCommandChange = [True, True]
+        self.auxStorage = 'XXXXX'
         self.currentSong = self.currentSong + 1
         if self.currentSong >= len(self.songs):
             self.currentSong = 0
@@ -103,7 +103,7 @@ class ManagerStatus:
         self.sendUpdateCommand()
     
     def setPreviousSong(self):
-        self.forceCommandChange = [True, True]
+        self.auxStorage = 'XXXXX'
         self.currentSong = self.currentSong - 1
         if self.currentSong < 0:
             self.currentSong = len(self.songs) - 1
@@ -113,47 +113,54 @@ class ManagerStatus:
     def setNextTone(self):
         ctone = self.getCurrentTone()
         ntone = self.getNextTone()
-        self.forceCommandChange = [ctone[0] != ntone[0], ctone[:5] != ntone[:5]]
+        sendCPCommand = ctone[0] != ntone[0]
+        sendToneCommand = ctone[:5] != ntone[:5] and ntone[:5] != self.auxStorage[:5]
+        if sendCPCommand:
+            self.auxStorage = ctone
         self.currentTone = (self.currentTone + 1) % len(self.songs[self.currentSong][0])
-        self.sendUpdateCommand()
+        self.sendUpdateCommand(sendCPCommand, sendToneCommand)
         
     def setPreviousTone(self):
         ctone = self.getCurrentTone()
         ptone = self.getPreviousTone()
-        self.forceCommandChange = [ctone[0] != ptone[0], ctone[:5] != ptone[:5]]
+        sendCPCommand = ctone[0] != ptone[0]
+        sendToneCommand = ctone[:5] != ptone[:5] and ptone[:5] != self.auxStorage[:5]
+        if sendCPCommand:
+            self.auxStorage = ctone
         self.currentTone = self.currentTone - 1
         if self.currentTone < 0:
             self.currentTone = len(self.songs[self.currentSong][0]) - 1
-        self.sendUpdateCommand()
+        self.sendUpdateCommand(sendCPCommand, sendToneCommand)
 
-    def setTone(self, n, preventCut=False):
+    def setTone(self, n):
         if n >= len(self.songs[self.currentSong][0]):
             return
         ctone = self.getCurrentTone()
         ntone = self.songs[self.currentSong][0][n]
-        if not preventCut or ctone == ntone:
-            self.forceCommandChange = [True, True]
-        elif ctone[:5] == ntone[:5]:
-            self.forceCommandChange = [False, False]
+        if ctone == ntone:
+            sendCPCommand, sendToneCommand = [True, True]
+            self.auxStorage = 'XXXXX'
         else:
-            self.forceCommandChange = [ctone[0] != ntone[0], ctone[:5] != ntone[:5]]
-        
+            sendCPCommand = ctone[0] != ntone[0]
+            sendToneCommand = ctone[:5] != ntone[:5] and ntone[:5] != self.auxStorage[:5]
+            if sendCPCommand:
+                self.auxStorage = ctone
         self.currentTone = n
-        self.sendUpdateCommand()
+        self.sendUpdateCommand(sendCPCommand, sendToneCommand)
 
     def resetState(self):
         self.currentSong = 0
         self.currentTone = 0
         self.pedalCC = 2
         self.ATCC = 1
-        self.forceCommandChange = [True, True]
+        self.auxStorage = 'XXXXX'
         self.sendUpdateCommand()
 
     def setSong(self, song):
         if song < len(self.songs):
             self.currentSong = song
             self.currentTone = 0
-            self.forceCommandChange = [True, True]
+            self.auxStorage = 'XXXXX'
             self.sendUpdateCommand()
 
     def handleSW(self):
@@ -170,8 +177,8 @@ class ManagerStatus:
             return
         alsaseq.output( (10, 0, 0, 253, (0,0), src, dest, (0, 0, 0, 0, self.ATCC, val)) )
 
-    def handleCCSetTone(self, channel, preventCut=False):
-        self.setTone(channel, preventCut=preventCut)
+    def handleCCSetTone(self, channel):
+        self.setTone(channel)
         self.requestSystemUpdate()
 
     def togglePedal(self):
@@ -214,19 +221,19 @@ class ManagerStatus:
         elif self.ATCC == 7:
             return 'VOL'
 
-    def sendUpdateCommand(self):
+    def sendUpdateCommand(self, sendCPCommand=True, sendToneCommand=True):
         tone = self.getCurrentTone()
         toneCP = tone[0]
         toneBank = tone[1]
         toneNumber = tone[2:5]
 
-        if self.forceCommandChange[0]:
+        if sendCPCommand:
             if toneCP == 'C':
                 aplaymidi('midi-files/COMBI.MID')
             elif toneCP == 'P':
                 aplaymidi('midi-files/PROGRAM.MID')
 
-        if self.forceCommandChange[1]:        
+        if sendToneCommand:        
             bank = {'A': 0, 'B': 1, 'C': 2, 'D': 3, 'E': 4, 'F': 5}[toneBank]
             changeBankTone(bank, int(toneNumber))
         
@@ -246,7 +253,7 @@ class ManagerStatus:
                 if evtype == 10 and evdata[4] == 82 and evdata[5] == 127:
                     self.handleSW()
                 elif evtype == 10 and evdata[4] >= 26 and evdata[4] <= 29 and evdata[5] == 127:
-                    self.handleCCSetTone(evdata[4]-26, preventCut=True)
+                    self.handleCCSetTone(evdata[4]-26)
                 elif evtype == 10 and evdata[4] == 4:
                     self.handlePedal(ev[7][5], ev[6], ev[5])
                 elif evtype == 12:
