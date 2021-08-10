@@ -22,7 +22,9 @@ def changeBankTone(bank, tone):
         createMIDIfile(fname, bank, tone)
     aplaymidi(fname)
 
-def handlePMstate(pmStr):
+def handlePMstate(pmStr, delay=0):
+    if delay > 0:
+        aplaymidi('midi-files/MIDI.1.127.MID', delay)
     for i, c in enumerate(pmStr):
         if c == 'P':
             sendPM(i+1, 127)
@@ -239,7 +241,8 @@ class ManagerStatus:
         
         if len(tone) > 5:
             modifiersPM = tone[5:]
-            handlePMstate(modifiersPM)
+            delay = 1 if sendCPCommand or sendToneCommand else 0
+            handlePMstate(modifiersPM, delay)
             
     def on_closing(self):
         self.running = False
