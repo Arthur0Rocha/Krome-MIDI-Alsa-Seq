@@ -7,6 +7,47 @@ def aplaymidi(filename, delay=0):
 def aconnect(dev1, dev2):
     os.system(f'aconnect {dev1} {dev2}')
 
+def midiSysEx(sysEx):
+        message = [sysEx[0], len(sysEx) - 1] + sysEx[1:]
+        header = [
+                0x4d, 0x54, 0x68, 0x64,
+                0x00, 0x00, 0x00, 0x06,
+                0x00, 0x00, 
+                0x00, 0x01,
+                0x03, 0xc0
+        ]
+        content = [0x00] + message
+        ending = [
+                0x00, 0xff, 0x2f, 0x00
+        ]
+        track = [
+                0x4d, 0x54, 0x72, 0x6b,
+                0x00, 0x00, 0x00, len(content) + 4
+        ]
+        return bytes(header + track + content + ending)
+
+def initMIDIFolder():
+    if not os.path.isdir('midi-files'):
+        os.mkdir('midi-files')
+        print('Created midi-files folder.')
+    for val, CP in [(0x00, 'COMBI'), (0x02, 'PROGRAM')]:
+        if not os.path.isfile(f'midi-files/{CP}.MID'):
+            command = [0xF0, 0x42, 0x30, 0x00, 0x01, 0x15, 0x4E, val, 0xF7]
+            f = open(f'midi-files/{CP}.MID', 'wb')
+            f.write(midiSysEx(command))
+            f.close()
+            print(f'Created {CP} midi command.')
+    for i in range(4):
+        for val in [1, 127]:
+            if not os.path.isfile(f'midi-files/MIDI.{i}.{val}.MID'):
+                command = [0xF0, 0x42, 0x30, 0x00, 0x01, 0x15, 0x41, 0x00, 0x00, 0x0C + i, 0x00, 0x35, 0x00, 0x00, 0x00, 0x00, val, 0xF7]
+                filename = f'midi-files/MIDI.{i}.{val}.MID'
+                f = open(filename, 'wb')
+                f.write(command)
+                f.close()
+                print(f'Created {filename}.')
+   
+
 def createMIDIfile(filename, bank=0, tone=0):
     strout =  b'MThd\x00\x00\x00\x06\x00\x00\x00\x01\x03\xc0MTrk\x00\x00\x00\x0f\x00\xb0\x00\x00\x00\xb0\x20'  \
             + bytes([bank]) + b'\x00\xc0' \
@@ -15,6 +56,7 @@ def createMIDIfile(filename, bank=0, tone=0):
     f = open(filename, 'wb')
     f.write(strout)
     f.close()
+    print(f'Created {filename}.')
 
 def changeBankTone(bank, tone):
     fname = f"midi-files/{['A','B','C','D','E','F'][bank]}{tone:03d}.MID"
@@ -37,6 +79,8 @@ def sendPM(channel, value):
 class ManagerStatus:
     def __init__(self, songs, requestSystemUpdate):
         self.songs = songs
+
+        initMIDIFolder()
 
         alsaseq.client('Arthur SEQ', 1, 1, False)
 
