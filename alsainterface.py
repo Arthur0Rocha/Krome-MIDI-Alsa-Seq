@@ -31,19 +31,20 @@ def initMIDIFolder():
         os.mkdir('midi-files')
         print('Created midi-files folder.')
     for val, CP in [(0x00, 'COMBI'), (0x02, 'PROGRAM')]:
-        if not os.path.isfile(f'midi-files/{CP}.MID'):
+        filename = f'midi-files/{CP}.MID'
+        if not os.path.isfile(filename):
             command = [0xF0, 0x42, 0x30, 0x00, 0x01, 0x15, 0x4E, val, 0xF7]
-            f = open(f'midi-files/{CP}.MID', 'wb')
+            f = open(filename, 'wb')
             f.write(midiSysEx(command))
             f.close()
             print(f'Created {CP} midi command.')
     for i in range(4):
         for val in [1, 127]:
-            if not os.path.isfile(f'midi-files/MIDI.{i}.{val}.MID'):
+            filename = f'midi-files/MIDI.{i+1}.{val}.MID'
+            if not os.path.isfile(filename):
                 command = [0xF0, 0x42, 0x30, 0x00, 0x01, 0x15, 0x41, 0x00, 0x00, 0x0C + i, 0x00, 0x35, 0x00, 0x00, 0x00, 0x00, val, 0xF7]
-                filename = f'midi-files/MIDI.{i}.{val}.MID'
                 f = open(filename, 'wb')
-                f.write(command)
+                f.write(midiSysEx(command))
                 f.close()
                 print(f'Created {filename}.')
    
