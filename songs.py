@@ -13,7 +13,7 @@ refugio = [
     (['CD018'], 'The final count...'), # 12
     (['CD025'], 'Maniac'), # 13
     (['PF000'], 'Breaking the law'), # 14
-    (['CD000', 'PF015'], 'I want out'), # 15
+    (['CD000', 'PF013'], 'I want out'), # 15
     (['PF001', 'CD029', 'PF003'], 'Heaven and hell'), # 16
     (['CD001PM', 'CD001PP'], 'Zombie'), # 17
     (['CD026'], 'Take on me'), # 18
@@ -28,7 +28,7 @@ refugio = [
     (['CD001', 'PF001'], 'Bring me to life'), # 27
     (['CD001PM', 'CD001PP'], 'My immortal'), # 28
     (['CD021'], 'Going under'), # 29
-    (['PF008', 'PF001', 'CD029'], 'Teto de vidro'), # 30 TODO
+    (['CD006', 'PF001', 'CD029'], 'Teto de vidro'), # 30 
     (['PF001'], 'Admirável chip...'), # 31
     (['CD006', 'PF000', 'PF003'], 'Equalize'), # 32
     (['PF000'], 'Pulsos'), # 33
