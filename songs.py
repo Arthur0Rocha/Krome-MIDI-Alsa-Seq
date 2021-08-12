@@ -7,14 +7,14 @@ refugio = [
     (['CD020', 'PD084'], 'It\'s my life'), # 06
     (['PF001', 'CD001'], 'Toxicity'), # 07
     (['PF008', 'PF000'], 'Love ain\'t no...'), # 08
-    (['PF003'], 'Highway to hell'), # 09
+    (['PF003', 'PF000'], 'Highway to hell'), # 09
     (['PF008', 'PF006', 'PF001', 'PF000'], 'Tears of the d...'), # 10
     (['PD057', 'PF000'], 'The evil that...'), # 11
     (['CD018'], 'The final count...'), # 12
     (['CD025'], 'Maniac'), # 13
     (['PF000'], 'Breaking the law'), # 14
-    (['CD000', 'PF013'], 'I want out'), # 15
-    (['PF001', 'CD029', 'PF003'], 'Heaven and hell'), # 16
+    (['CD000', 'PF001', 'PF013'], 'I want out'), # 15
+    (['PF001', 'CD029'], 'Heaven and hell'), # 16
     (['CD001PM', 'CD001PP'], 'Zombie'), # 17
     (['CD026'], 'Take on me'), # 18
     (['CD027'], 'I don\'t wanna m...'), # 19
