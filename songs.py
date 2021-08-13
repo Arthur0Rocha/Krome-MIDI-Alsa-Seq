@@ -16,7 +16,7 @@ refugio = [
     (['CD031'], 'Everybody wants...'), # 14
     (['PF003', 'PF000'], 'Highway to hell'), # 15
     (['PF000'], 'Breaking the law'), # 16
-    (['CD006', 'PF000', 'PF003'], 'Equalize'), # 17
+    (['PF000', 'PF003'], 'Equalize'), # 17
     (['PF008', 'PF000'], 'Love ain\'t no...'), # 18
     (['CD001', 'PF001'], 'Bring me to life'), # 19
     (['PF001', 'CD001'], 'Toxicity'), # 20
@@ -72,7 +72,7 @@ refugio_spotify = [
     (['CD021'], 'Going under'), # 29
     (['CD006', 'PF001', 'CD029'], 'Teto de vidro'), # 30 
     (['PF001'], 'Admirável chip...'), # 31
-    (['CD006', 'PF000', 'PF003'], 'Equalize'), # 32
+    (['PF000', 'PF003'], 'Equalize'), # 32
     (['PF000'], 'Pulsos'), # 33
     (['CD029', 'PF001'], 'Everybody\'s fool'), # 34
     (['CD019'], 'Enjoy the silence'), # 35
