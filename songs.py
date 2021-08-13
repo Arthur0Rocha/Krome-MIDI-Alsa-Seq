@@ -29,7 +29,7 @@ refugio = [
     (['PF001', 'CD000'], 'Nothing else m...'), # 26
     (['CD029', 'PF001'], 'Everybody\'s fool'), # 27
     (['CD019'], 'Enjoy the silence'), # 28
-    (['CD001PM', 'CD001PP'], 'Na sua estante') # 29
+    (['CD001PM', 'CD001PP'], 'Na sua estante'), # 29
     (['CD027'], 'I don\'t wanna m...'), # 30
     (['PB011', 'CD016', 'CD017'], 'Mr. Crowley'), # 31
     (['PF001', 'CD001PM', 'PF000'], 'Wasting love'), # 32
