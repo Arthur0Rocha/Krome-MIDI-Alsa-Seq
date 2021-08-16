@@ -97,34 +97,53 @@ class ManagerStatus:
         self.resetState()
         
     def getCurrentSong(self):
-        return self.songs[self.currentSong][1]
+        return self.songs[self.currentSong]['name']
 
     def getNextSong(self):
         index = self.currentSong + 1
         if index >= len(self.songs):
             index = 0
-        return self.songs[index][1]
+        return self.songs[index]['name']
     
     def getPreviousSong(self):
         index = self.currentSong - 1
         if index < 0:
             index = len(self.songs) - 1
-        return self.songs[index][1]
+        return self.songs[index]['name']
 
     def getCurrentTone(self):
-        return self.songs[self.currentSong][0][self.currentTone]
+        return self.getTonesList()[self.currentTone]
 
     def getNextTone(self):
         nextTone = self.currentTone + 1
-        if nextTone >= len(self.songs[self.currentSong][0]):
+        if nextTone >= len(self.getTonesList()):
             nextTone = 0
-        return self.songs[self.currentSong][0][nextTone]
+        return self.getTonesList()[nextTone]
 
     def getPreviousTone(self):
         previousTone = self.currentTone - 1
         if previousTone < 0:
-            previousTone = len(self.songs[self.currentSong][0]) - 1
-        return self.songs[self.currentSong][0][previousTone]
+            previousTone = len(self.getTonesList()) - 1
+        return self.getTonesList()[previousTone]
+
+    def getTonesList(self):
+        return self.songs[self.currentSong]['tones']
+
+    def getSongPD(self):
+        pd = '-Y'
+        if 'pd' in self.songs[self.currentSong]:
+            pd = self.songs[self.currentSong]['pd']
+            if type(pd) == type(list()):
+                pd = pd[self.currentTone]
+        return {'': -1, '+Y': 1, '-Y': 2, 'VOL': 7, 'SW': 82}[pd]
+
+    def getSongAT(self):
+        at = '+Y'
+        if 'at' in self.songs[self.currentSong]:
+            at = self.songs[self.currentSong]['at']
+            if type(at) == type(list()):
+                at = at[self.currentTone]
+        return {'': -1, '+Y': 1, '-Y': 2, 'VOL': 7}[at]
 
     def getFullStatus(self):
         return [self.getCurrentSong(), 
@@ -136,25 +155,47 @@ class ManagerStatus:
                     self.getNextTone(),
                     self.getPreviousTone(),
                     self.currentTone,
-                    self.songs[self.currentSong][0],
+                    self.getTonesList(),
                     self.getPedal(),
                     self.getAT()
                 ]
 
-    def setNextSong(self):
+    def resetState(self):
+        self.currentSong = 0
+        self.currentTone = 0
+        self.clearSettings()
+        self.sendUpdateCommand()
+
+    def clearSettings(self):
         self.auxStorage = 'XXXXX'
+        self.pdswTriggered = False
+        self.updatePdAt()
+
+    def updatePdAt(self):
+        self.pedalCC = self.getSongPD()
+        self.ATCC = self.getSongAT()
+
+    def setSong(self, song):
+        if song < len(self.songs):
+            self.currentSong = song
+            self.currentTone = 0
+            self.clearSettings()
+            self.sendUpdateCommand()
+
+    def setNextSong(self):
         self.currentSong = self.currentSong + 1
         if self.currentSong >= len(self.songs):
             self.currentSong = 0
         self.currentTone = 0
+        self.clearSettings()
         self.sendUpdateCommand()
     
     def setPreviousSong(self):
-        self.auxStorage = 'XXXXX'
         self.currentSong = self.currentSong - 1
         if self.currentSong < 0:
             self.currentSong = len(self.songs) - 1
         self.currentTone = 0
+        self.clearSettings()
         self.sendUpdateCommand()
     
     def setNextTone(self):
@@ -164,7 +205,8 @@ class ManagerStatus:
         sendToneCommand = ctone[:5] != ntone[:5] and ntone[:5] != self.auxStorage[:5]
         if sendCPCommand:
             self.auxStorage = ctone
-        self.currentTone = (self.currentTone + 1) % len(self.songs[self.currentSong][0])
+        self.currentTone = (self.currentTone + 1) % len(self.getTonesList())
+        self.updatePdAt()
         self.sendUpdateCommand(sendCPCommand, sendToneCommand)
         
     def setPreviousTone(self):
@@ -176,14 +218,16 @@ class ManagerStatus:
             self.auxStorage = ctone
         self.currentTone = self.currentTone - 1
         if self.currentTone < 0:
-            self.currentTone = len(self.songs[self.currentSong][0]) - 1
+            self.currentTone = len(self.getTonesList()) - 1
+        self.updatePdAt()
         self.sendUpdateCommand(sendCPCommand, sendToneCommand)
 
     def setTone(self, n):
-        if n >= len(self.songs[self.currentSong][0]):
+        if n >= len(self.getTonesList()):
             return
         ctone = self.getCurrentTone()
-        ntone = self.songs[self.currentSong][0][n]
+        self.currentTone = n
+        ntone = self.getCurrentTone()
         if ctone == ntone:
             sendCPCommand, sendToneCommand = [True, True]
             self.auxStorage = 'XXXXX'
@@ -192,23 +236,8 @@ class ManagerStatus:
             sendToneCommand = ctone[:5] != ntone[:5] and ntone[:5] != self.auxStorage[:5]
             if sendCPCommand:
                 self.auxStorage = ctone
-        self.currentTone = n
+        self.updatePdAt()
         self.sendUpdateCommand(sendCPCommand, sendToneCommand)
-
-    def resetState(self):
-        self.currentSong = 0
-        self.currentTone = 0
-        self.pedalCC = 2
-        self.ATCC = 1
-        self.auxStorage = 'XXXXX'
-        self.sendUpdateCommand()
-
-    def setSong(self, song):
-        if song < len(self.songs):
-            self.currentSong = song
-            self.currentTone = 0
-            self.auxStorage = 'XXXXX'
-            self.sendUpdateCommand()
 
     def handleSW(self):
         self.setNextTone()
@@ -216,6 +245,13 @@ class ManagerStatus:
 
     def handlePedal(self, val, src, dest):
         if self.pedalCC < 0:
+            return
+        if self.pedalCC == 82:
+            if self.pdswTriggered and val > 80:
+                self.pdswTriggered = False
+                self.handleSW()
+            elif not self.pdswTriggered and val < 40:
+                self.pdswTriggered = True
             return
         alsaseq.output( (10, 0, 0, 253, (0,0), src, dest, (0, 0, 0, 0, self.pedalCC, val)) )
 
@@ -236,6 +272,8 @@ class ManagerStatus:
         elif self.pedalCC == 2:
             self.pedalCC = 7
         elif self.pedalCC == 7:
+            self.pedalCC = 82
+        elif self.pedalCC == 82:
             self.pedalCC = -1
 
     def toggleAT(self):
@@ -257,6 +295,8 @@ class ManagerStatus:
             return '-Y'
         elif self.pedalCC == 7:
             return 'VOL'
+        elif self.pedalCC == 82:
+            return 'SW'
 
     def getAT(self):
         if self.ATCC == -1:
