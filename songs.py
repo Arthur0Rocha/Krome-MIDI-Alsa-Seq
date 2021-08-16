@@ -6,11 +6,11 @@ refugio = [
     {"tones": ['CD028', 'CD001PM'], "name": 'Numb', "pd": 'SW'}, # 04 
     {"tones": ['PF000'], "name": 'Machine head'}, # 05
     {"tones": ['PF000'], "name": 'Jeremy', "pd": '+Y'}, # 06
-    {"tones": ['CD006', 'PF001', 'CD029'], "name": 'Teto de vidro', "pd": ['SW', 'SW', 'VOL']}, # 07
+    {"tones": ['CD006', 'PF001', 'CD029'], "name": 'Teto de vidro', "pd": 'SW'}, # 07
     {"tones": ['PF011', 'CD029'], "name": 'Man in the box', "pd": 'SW'}, # 08
     {"tones": ['PF000', 'PF001', 'PF003', 'PF004'], "name": 'Don\'t speak', "pd": 'SW', "at": '+Y'}, # 09
     {"tones": ['CD001PM'], "name": 'Zombie'}, # 10
-    {"tones": ['CD021'], "name": 'Going under'}, # 11
+    {"tones": ['CD021'], "name": 'Going under', "pd": 'VOL'}, # 11
     {"tones": ['CD020', 'PD084'], "name": 'It\'s my life', "pd": 'SW'}, # 12
     {"tones": ['PF000'], "name": 'Pulsos'}, # 13
     {"tones": ['CD031'], "name": 'Everybody wants...'}, # 14
