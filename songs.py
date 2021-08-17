@@ -6,31 +6,31 @@ refugio = [
     {"tones": ['CD028', 'CD001PM'], "name": 'Numb', "pd": 'SW'}, # 04 
     {"tones": ['PF000'], "name": 'Machine head'}, # 05
     {"tones": ['PF000'], "name": 'Jeremy', "pd": '+Y'}, # 06
-    {"tones": ['CD006', 'PF001', 'CD029'], "name": 'Teto de vidro', "pd": 'SW'}, # 07
-    {"tones": ['PF011', 'CD029'], "name": 'Man in the box', "pd": 'SW'}, # 08
-    {"tones": ['PF000', 'PF001', 'PF003', 'PF004'], "name": 'Don\'t speak', "pd": 'SW', "at": '+Y'}, # 09
-    {"tones": ['CD001PM'], "name": 'Zombie'}, # 10
-    {"tones": ['CD021'], "name": 'Going under', "pd": 'VOL'}, # 11
-    {"tones": ['CD020', 'PD084'], "name": 'It\'s my life', "pd": 'SW'}, # 12
-    {"tones": ['PF000'], "name": 'Pulsos'}, # 13
-    {"tones": ['CD031'], "name": 'Everybody wants...'}, # 14
-    {"tones": ['PF003', 'PF000'], "name": 'Highway to hell'}, # 15
-    {"tones": ['PF000'], "name": 'Breaking the law'}, # 16
-    {"tones": ['PF000', 'PF003'], "name": 'Equalize', "pd": 'SW'}, # 17
-    {"tones": ['PF008', 'PF000'], "name": 'Love ain\'t no...', "pd": 'SW'}, # 18
-    {"tones": ['CD001', 'PF001'], "name": 'Bring me to life', "pd": 'SW'}, # 19
-    {"tones": ['PF001', 'CD001'], "name": 'Toxicity'}, # 20
+    {"tones": ['CD001PM', 'CD001PP'], "name": 'My immortal'}, # 07
+    {"tones": ['CD006', 'PF001', 'CD029'], "name": 'Teto de vidro', "pd": 'SW'}, # 08
+    {"tones": ['PF011', 'CD029'], "name": 'Man in the box', "pd": 'SW'}, # 09
+    {"tones": ['PF000', 'PF001', 'PF003', 'PF004'], "name": 'Don\'t speak', "pd": 'SW', "at": '+Y'}, # 10
+    {"tones": ['CD001PM'], "name": 'Zombie'}, # 11
+    {"tones": ['CD021'], "name": 'Going under', "pd": 'VOL'}, # 12
+    {"tones": ['CD020', 'PD084'], "name": 'It\'s my life', "pd": 'SW'}, # 13
+    {"tones": ['PF000'], "name": 'Pulsos'}, # 14
+    {"tones": ['CD031'], "name": 'Everybody wants...'}, # 15
+    {"tones": ['PF003', 'PF000'], "name": 'Highway to hell'}, # 16
+    {"tones": ['PF000'], "name": 'Breaking the law'}, # 17
+    {"tones": ['PF000', 'PF003'], "name": 'Equalize', "pd": 'SW'}, # 18
+    {"tones": ['PF008', 'PF000'], "name": 'Love ain\'t no...', "pd": 'SW'}, # 19
+    {"tones": ['CD001', 'PF001'], "name": 'Bring me to life', "pd": 'SW'}, # 20
+    {"tones": ['PF001', 'CD001'], "name": 'Toxicity'}, # 21
     # Parte 2    
-    {"tones": ['CD018'], "name": 'The final count...'}, # 21
-    {"tones": ['PF007'], "name": 'Jump'}, # 22
-    {"tones": ['CD001PM', 'CD001PP'], "name": 'My immortal'}, # 23
+    {"tones": ['CD018'], "name": 'The final count...'}, # 22
+    {"tones": ['PF007'], "name": 'Jump'}, # 23
     {"tones": ['PF007'], "name": 'Separate ways'}, # 24
     {"tones": ['CD022PP', 'CD022PM'], "name": 'Perfect strangers', "pd": 'SW'}, # 25
     {"tones": ['PF001', 'CD000'], "name": 'Nothing else m...'}, # 26
     {"tones": ['CD029', 'PF001'], "name": 'Everybody\'s fool'}, # 27
     {"tones": ['CD019'], "name": 'Enjoy the silence'}, # 28
-    {"tones": ['CD001PM', 'CD001PP'], "name": 'Na sua estante'}, # 29
-    {"tones": ['CD027'], "name": 'I don\'t wanna m...'}, # 30
+    {"tones": ['CD027'], "name": 'I don\'t wanna m...'}, # 29
+    {"tones": ['CD001PM', 'CD001PP'], "name": 'Na sua estante'}, # 30
     {"tones": ['PB011', 'CD016', 'CD017'], "name": 'Mr. Crowley', "pd": 'SW'}, # 31
     {"tones": ['PF001', 'CD001PM', 'PF000'], "name": 'Wasting love'}, # 32
     {"tones": ['PF005'], "name": 'Radio ga ga'}, # 33
