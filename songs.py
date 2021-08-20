@@ -29,8 +29,8 @@ refugio = [
     {"tones": ['PF001', 'CD000'], "name": 'Nothing else m...'}, # 26
     {"tones": ['CD029', 'PF001'], "name": 'Everybody\'s fool'}, # 27
     {"tones": ['CD019'], "name": 'Enjoy the silence'}, # 28
-    {"tones": ['CD027'], "name": 'I don\'t wanna m...'}, # 29
-    {"tones": ['CD001PM', 'CD001PP'], "name": 'Na sua estante'}, # 30
+    {"tones": ['CD001PM', 'CD001PP'], "name": 'Na sua estante'}, # 29
+    {"tones": ['CD027'], "name": 'I don\'t wanna m...'}, # 30
     {"tones": ['PB011', 'CD016', 'CD017'], "name": 'Mr. Crowley', "pd": 'SW'}, # 31
     {"tones": ['PF001', 'CD001PM', 'PF000'], "name": 'Wasting love'}, # 32
     {"tones": ['PF005'], "name": 'Radio ga ga'}, # 33
