@@ -46,6 +46,7 @@ refugio_20211008 = [
     {"tones": ['PF004', 'PF010'], "name": 'Até quando esperar', "pd": 'SW'}, # 37
     {"tones": ['PF000', 'CD029'], "name": 'American idiot', "pd": 'SW'}, # 37
     {"tones": ['PF005', 'CD006', 'PE002'], "name": 'Girls just want to...', "pd": 'SW'}, # 37
+    {"tones": ['CD024', 'PA092'], "name": 'Mama, I\'m coming...', "pd": '-Y', "at": '+Y'}, # 30
 ]
 
 livePitty = [
