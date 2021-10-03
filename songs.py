@@ -3,17 +3,17 @@ refugio_20211008 = [
     {"tones": ['CD025'], "name": 'Maniac', "pd": '-Y', "at": '+Y'}, # 01
     {"tones": ['CD026'], "name": 'Take on me'}, # 02
     # {"tones": ['PF001'], "name": 'Admirável chip...'}, # 03
-    {"tones": ['CD028', 'CD001PM'], "name": 'Numb', "pd": 'SW'}, # 04 
+    {"tones": ['CD028', 'PA020', 'CD001PM'], "name": 'Numb', "pd": 'SW'}, # 04 
     {"tones": ['PF000'], "name": 'Machine head'}, # 05
     {"tones": ['PF000'], "name": 'Jeremy', "pd": '+Y'}, # 06
     # {"tones": ['CD001PM', 'CD001PP'], "name": 'My immortal'}, # 07
     {"tones": ['CD006', 'PF001', 'CD029'], "name": 'Teto de vidro', "pd": 'SW'}, # 08
     {"tones": ['PF011', 'CD029'], "name": 'Man in the box', "pd": 'SW'}, # 09
     {"tones": ['PF000', 'PF001', 'PF003', 'PF004'], "name": 'Don\'t speak', "pd": 'SW', "at": '+Y'}, # 10
-    {"tones": ['CD001PM'], "name": 'Zombie'}, # 11
+    {"tones": ['CD001PM', 'PA020'], "name": 'Zombie'}, # 11
     # {"tones": ['CD021'], "name": 'Going under', "pd": 'VOL'}, # 12
     {"tones": ['CD020', 'PD084'], "name": 'It\'s my life', "pd": 'SW'}, # 13
-    {"tones": ['PF000'], "name": 'Pulsos'}, # 14
+    {"tones": ['PF000', 'CD029'], "name": 'Pulsos'}, # 14
     {"tones": ['CD031'], "name": 'Everybody wants...'}, # 15
     {"tones": ['PF003', 'PF000'], "name": 'Highway to hell'}, # 16
     {"tones": ['PF000'], "name": 'Breaking the law'}, # 17
