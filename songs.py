@@ -3,7 +3,7 @@ refugio_20211008 = [
     {"tones": ['CD025'], "name": 'Maniac', "pd": '-Y', "at": '+Y'}, # 01
     {"tones": ['CD026'], "name": 'Take on me'}, # 02
     # {"tones": ['PF001'], "name": 'Admirável chip...'}, # 03
-    {"tones": ['CD028', 'PA020', 'CD001PM'], "name": 'Numb', "pd": 'SW'}, # 04 
+    {"tones": ['CD028', 'PA020', 'PF001', 'CD001PM'], "name": 'Numb', "pd": 'SW'}, # 04 
     {"tones": ['PF000'], "name": 'Machine head'}, # 05
     {"tones": ['PF000'], "name": 'Jeremy', "pd": '+Y'}, # 06
     # {"tones": ['CD001PM', 'CD001PP'], "name": 'My immortal'}, # 07
