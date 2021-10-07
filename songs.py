@@ -20,7 +20,7 @@ refugio_20211008 = [
  
     # Parte 2    
     {"tones": ['PB011', 'CD016', 'CD017'], "name": 'Mr. Crowley', "pd": 'SW'}, # 18
-    {"tones": ['PF007'], "name": 'Jump'}, # 19
+    {"tones": ['PF007', 'PF001'], "name": 'Jump'}, # 19
     {"tones": ['CD018'], "name": 'The final count...'}, # 20
     {"tones": ['CD001PM', 'PA020'], "name": 'Zombie'}, # 21
     {"tones": ['CD020', 'PD084'], "name": 'It\'s my life', "pd": 'SW'}, # 22
@@ -33,17 +33,14 @@ refugio_20211008 = [
     {"tones": ['PF001', 'CD000'], "name": 'Nothing else m...'}, # 29
     {"tones": ['CD000', 'PF001', 'PF013'], "name": 'I want out', "pd": 'SW'}, # 30
     {"tones": ['PF000', 'CD029'], "name": 'Sweet child', "pd": 'SW'}, # 31
-    {"tones": ['PF000'], "name": 'The trooper', "pd": 'SW'}, # 32 ou 37
+    {"tones": ['PF000'], "name": 'Jeremy', "pd": '+Y'}, # 32
     {"tones": ['CD027'], "name": 'I don\'t wanna m...'}, # 33
     {"tones": ['PF001', 'CD001PM', 'PF000'], "name": 'Wasting love'}, # 34
     {"tones": ['PF000', 'CD029'], "name": 'American idiot', "pd": 'SW'}, # 35
     {"tones": ['CD022PP', 'CD022PM'], "name": 'Perfect strangers', "pd": 'SW'}, # 36
-    
+    {"tones": ['PF000'], "name": 'The trooper', "pd": 'SW'}, # 37
     {"tones": ['PF001', 'CD029'], "name": 'Heaven and hell', "pd": 'SW'}, # 38
     {"tones": ['PF003', 'PF000'], "name": 'Highway to hell'}, # 39
-    
-    {"tones": ['PF000'], "name": 'Jeremy', "pd": '+Y'}, # XX
- 
 ]
 
 livePitty = [
