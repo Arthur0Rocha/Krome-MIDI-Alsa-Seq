@@ -3,7 +3,7 @@ from GUI import Application
 from CLI import KeyboardManager
 from threadslib import GeneralThread
 
-from songs import refugio_20211008 as musicas
+from songs import area86 as musicas
 
 def main():
     manager = SongManager(songs=musicas)

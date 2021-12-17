@@ -1,3 +1,55 @@
+area86 = [
+    # Parte 1
+    {"tones": ['PF001', 'PF000', 'PF010', 'CD029'], "name": 'Wicked game', "pd": 'SW'}, # 01
+    {"tones": ['CD031'], "name": 'Everybody wants...'}, # 02
+    {"tones": ['PF011', 'CD029'], "name": 'Man in the box', "pd": 'SW'}, # 03
+    {"tones": ['CD020', 'PD084'], "name": 'It\'s my life', "pd": 'SW'}, # 04
+    {"tones": ['PF000', 'PE001'], "name": 'Whats up', "pd": 'SW'}, # 05
+    {"tones": ['PF000'], "name": 'Machine head'}, # 06
+    {"tones": ['PF005', 'CD006', 'PE002'], "name": 'Girls just want to...', "pd": 'SW'}, # 07
+    {"tones": ['PF008', 'PF006', 'PF001', 'PF000'], "name": 'Tears of the d...', "pd": 'SW'}, # 08
+    {"tones": ['PF000'], "name": 'My sacrifice'}, # 09
+    {"tones": ['CD019'], "name": 'Enjoy the silence'}, # 10
+    {"tones": ['CD021'], "name": 'Going under', "pd": 'VOL'}, # 11
+    {"tones": ['CD001', 'PF001'], "name": 'Bring me to life', "pd": 'SW'}, # 12
+    {"tones": ['CD022PP', 'CD022PM'], "name": 'Perfect strangers', "pd": 'SW'}, # 13
+    {"tones": ['PF001', 'CD001PM', 'PF000'], "name": 'Wasting love'}, # 14
+    {"tones": ['PF007'], "name": 'Separate ways'}, # 15
+    {"tones": ['CD025'], "name": 'Maniac', "pd": '-Y', "at": '+Y'}, # 16
+    {"tones": ['PF001', 'CD000'], "name": 'Nothing else m...'}, # 17
+    {"tones": ['CD028', 'PA020', 'PF001', 'CD001PM'], "name": 'Numb', "pd": 'SW'}, # 18 
+    {"tones": ['PF000'], "name": 'Jeremy', "pd": '+Y'}, # 19
+    {"tones": ['PA092'], "name": 'I love rock n roll', "pd": 'SW'}, # 20
+    {"tones": ['PF004', 'PF010'], "name": 'Até quando esperar', "pd": 'SW'}, # 21
+    {"tones": ['PF001'], "name": 'Máscara', "pd": 'VOL', "at": '+Y'}, # 22
+    {"tones": ['CD026'], "name": 'Take on me'}, # 23
+    {"tones": ['CD024', 'PA092'], "name": 'Mama, I\'m coming...', "pd": '-Y', "at": '+Y'}, # 24
+    {"tones": ['PF000'], "name": 'Plush', "pd": '+Y'}, # 25
+    {"tones": ['PF001', 'CD001'], "name": 'Toxicity'}, # 26
+    {"tones": ['PF008', 'PF000'], "name": 'Love ain\'t no...', "pd": 'SW'}, # 27
+    {"tones": ['PF000', 'CD029'], "name": 'American idiot', "pd": 'SW'}, # 28
+    {"tones": ['PF001'], "name": 'Admirável chip...', "pd": '-Y', "at": '+Y'}, # 29
+    {"tones": ['PF000', 'CD029'], "name": 'Pulsos'}, # 30
+    {"tones": ['CD001PM', 'PA020'], "name": 'Zombie'}, # 31
+    {"tones": ['PF000'], "name": 'Breaking the law'}, # 32
+    {"tones": ['PF000', 'PF001', 'PF003', 'PF004'], "name": 'Don\'t speak', "pd": 'SW', "at": '+Y'}, # 33
+    {"tones": ['PF000', 'CD029'], "name": 'Sweet child', "pd": 'SW'}, # 34
+    {"tones": ['CD018'], "name": 'The final count...'}, # 35
+    {"tones": ['PD057', 'PF000'], "name": 'The evil that...', "pd": 'SW'}, # 36
+    {"tones": ['CD027'], "name": 'I don\'t wanna m...'}, # 37
+    {"tones": ['CD000', 'PF001', 'PF013'], "name": 'I want out', "pd": 'SW'}, # 38
+    {"tones": ['PF003', 'PF000'], "name": 'Highway to hell'}, # 39
+    {"tones": ['PF007', 'PF001'], "name": 'Jump'}, # 40
+    {"tones": ['PF000'], "name": 'The trooper', "pd": 'SW'}, # 41
+    {"tones": ['PF001', 'CD029'], "name": 'Heaven and hell', "pd": 'SW'}, # 42
+    
+    # Não selecionadas
+    {"tones": ['PB011', 'CD016', 'CD017'], "name": 'Mr. Crowley', "pd": 'SW'}, # *43*
+    {"tones": ['CD006', 'PF001', 'CD029'], "name": 'Teto de vidro', "pd": 'SW'}, # *44*
+    {"tones": ['PD020', 'CD001PM', 'CD001PP'], "name": 'Na sua estante'}, # *45*
+ 
+]
+
 refugio_20211008 = [
     # Parte 1
     {"tones": ['PF001', 'PF000', 'PF010', 'CD029'], "name": 'Wicked game', "pd": 'SW'}, # 01
