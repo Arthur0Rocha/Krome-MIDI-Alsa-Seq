@@ -1,11 +1,11 @@
+import sys
+
 from manager import SongManager
 from GUI import Application
 from CLI import KeyboardManager
 from threadslib import GeneralThread
 
 from songs import casa_amarela_20220121 as musicas
-
-import sys
 
 def main(cable = False):
     manager = SongManager(songs=musicas, cable = cable)
