@@ -78,14 +78,15 @@ def sendPM(channel, value):
     aplaymidi(f'midi-files/MIDI.{channel}.{127 if value > 0 else 1}.MID')
 
 class ManagerStatus:
-    def __init__(self, songs, requestSystemUpdate):
+    def __init__(self, songs, requestSystemUpdate, cable = False):
         self.songs = songs
 
         initMIDIFolder()
 
         alsaseq.client('Arthur SEQ', 1, 1, False)
 
-        aconnect("\"Vortex Wireless 2\"", "KROME")
+        if not cable:
+            aconnect("\"Vortex Wireless 2\"", "KROME")
         aconnect("\"Vortex Wireless 2\"", "Arthur SEQ")
         aconnect("KROME", "Arthur SEQ")
         aconnect("\"Arthur SEQ\":1", "KROME")

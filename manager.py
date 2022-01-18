@@ -1,9 +1,9 @@
 from alsainterface import ManagerStatus
 
 class SongManager:
-    def __init__(self, songs):
+    def __init__(self, songs, cable = False):
 
-        self.status = ManagerStatus(songs, self.runCallbacks)
+        self.status = ManagerStatus(songs, self.runCallbacks, cable)
 
         self.callbacks = []
 

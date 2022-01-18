@@ -5,8 +5,10 @@ from threadslib import GeneralThread
 
 from songs import casa_amarela_20220121 as musicas
 
-def main():
-    manager = SongManager(songs=musicas)
+import sys
+
+def main(cable = False):
+    manager = SongManager(songs=musicas, cable = cable)
 
     CLI = KeyboardManager(commands=manager.getCLICommands())
     GUI = Application(commands=manager.getGUICommands(), closing_callbacks=[CLI.on_close])
@@ -21,4 +23,5 @@ def main():
     manager.on_closing()
     
 if __name__ == "__main__":
-    main()
+    cable = 'cable' in sys.argv
+    main(cable)
