@@ -1,6 +1,6 @@
 casa_amarela_20220121 = [
     # Parte 1
-    {"name": 'Machine head',          "tones": ['PF000', 'CD000']                                                      }, # 01
+    {"name": 'Machine head',          "tones": ['PF000', 'CD000']                                             }, # 01
     {"name": 'Man in the box',        "tones": ['PF011', 'CD029'],                     "pd": 'SW'             }, # 02
     {"name": 'Wicked game',           "tones": ['PF001', 'PF000', 'PF010', 'CD029'],   "pd": 'SW'             }, # 03
     {"name": 'Everybody wants...',    "tones": ['CD031']                                                      }, # 04
@@ -29,7 +29,7 @@ casa_amarela_20220121 = [
     {"name": 'Zombie',                "tones": ['CD001PM', 'PA020']                                           }, # 27
     {"name": 'Breaking the law',      "tones": ['PF000', 'CD000']                                             }, # 28
     {"name": 'Jump',                  "tones": ['PF007', 'PF001']                                             }, # 29
-    {"name": 'Sweet child',           "tones": ['PF000', 'CD029'],                     "pd": 'SW'             }, # 30
+    {"name": 'Sweet child',           "tones": ['PF000', 'CD029', 'CD000'],            "pd": 'SW'             }, # 30
     {"name": 'The final count...',    "tones": ['CD018']                                                      }, # 31
     {"name": 'Highway to hell',       "tones": ['PF003', 'PF000']                                             }, # 32
 ]
