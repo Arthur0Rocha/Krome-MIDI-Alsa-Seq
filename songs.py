@@ -34,6 +34,8 @@ casa_amarela_20220121 = [
     {"name": 'Highway to hell',       "tones": ['PF003', 'PF000']                                             }, # 32
 ]
 
+area86_20220305 = casa_amarela_20220121
+
 area86 = [
     # Parte 1
     {"tones": ['PF001', 'PF000', 'PF010', 'CD029'], "name": 'Wicked game', "pd": 'SW'}, # 01
