@@ -9,7 +9,7 @@ area86_20220305 = [
     {"name": 'Plush',                 "tones": ['PF000', 'PA092'],                     "pd": '+Y'             }, # 08
     {"name": 'Enjoy the silence',     "tones": ['CD019']                                                      }, # 09
     {"name": 'Bring me to life',      "tones": ['CD001', 'PF001'],                     "pd": 'SW'             }, # 10
-    {"name": 'Perfect strangers',     "tones": ['CD022PP', 'CD022PM'],                 "pd": 'SW'             }, # 11
+    {"name": 'Perfect strangers',     "tones": ['CD022PP', 'CD022PM', 'PA092'],        "pd": 'SW'             }, # 11
     {"name": 'The evil that...',      "tones": ['PD057', 'PF000'],                     "pd": 'SW'             }, # 12
     {"name": 'Mr. Crowley',           "tones": ['PB011', 'CD016', 'CD017'],            "pd": 'SW'             }, # 13
     {"name": 'Maniac',                "tones": ['CD025'],                              "pd": '-Y',  "at": '+Y'}, # 14
