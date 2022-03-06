@@ -1,3 +1,7 @@
+generals = [
+    {"name": 'General Tones',         "tones": ['PF000', 'PF001', 'PA020', 'CD000'],   "pd": '-Y',  "at": '+Y'}, # XX
+]
+
 area86_20220305 = [
     {"name": 'The final count...',    "tones": ['CD018']                                                      }, # 01
     {"name": 'Wicked game',           "tones": ['PF001', 'PF000', 'PF010', 'CD029'],   "pd": 'SW'             }, # 02
