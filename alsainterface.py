@@ -4,8 +4,17 @@ import os
 def aplaymidi(filename, delay=0):
     os.system(f'aplaymidi -p KROME -d {delay} {filename}')
 
-def aconnect(dev1, dev2):
-    os.system(f'aconnect {dev1} {dev2}')
+def aconnect(dev1, dev2, d = False):
+    os.system(f'aconnect {"-d" if d else ""} {dev1} {dev2}')
+
+def makeConnections( cable = False):
+    if not cable:
+        aconnect("\"Vortex Wireless 2\"", "KROME")
+    else:
+        aconnect("\"Vortex Wireless 2\"", "KROME", True)
+    aconnect("\"Vortex Wireless 2\"", "Arthur SEQ")
+    aconnect("KROME", "Arthur SEQ")
+    aconnect("\"Arthur SEQ\":1", "KROME")
 
 def midiSysEx(sysEx):
         message = [sysEx[0], len(sysEx) - 1] + sysEx[1:]
@@ -85,11 +94,7 @@ class ManagerStatus:
 
         alsaseq.client('Arthur SEQ', 1, 1, False)
 
-        if not cable:
-            aconnect("\"Vortex Wireless 2\"", "KROME")
-        aconnect("\"Vortex Wireless 2\"", "Arthur SEQ")
-        aconnect("KROME", "Arthur SEQ")
-        aconnect("\"Arthur SEQ\":1", "KROME")
+        makeConnections(cable)
         
         self.requestSystemUpdate = requestSystemUpdate
 
