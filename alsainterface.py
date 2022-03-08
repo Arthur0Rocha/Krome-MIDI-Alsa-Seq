@@ -4,14 +4,14 @@ import os
 def aplaymidi(filename, delay=0):
     os.system(f'aplaymidi -p KROME -d {delay} {filename}')
 
-def aconnect(dev1, dev2, d = False):
-    os.system(f'aconnect {"-d" if d else ""} {dev1} {dev2}')
+def aconnect(dev1, dev2, disconnect=False):
+    os.system(f'aconnect {"-d" if disconnect else ""} {dev1} {dev2}')
 
 def makeConnections( cable = False):
     if not cable:
         aconnect("\"Vortex Wireless 2\"", "KROME")
     else:
-        aconnect("\"Vortex Wireless 2\"", "KROME", True)
+        aconnect("\"Vortex Wireless 2\"", "KROME", disconnect=True)
     aconnect("\"Vortex Wireless 2\"", "Arthur SEQ")
     aconnect("KROME", "Arthur SEQ")
     aconnect("\"Arthur SEQ\":1", "KROME")
