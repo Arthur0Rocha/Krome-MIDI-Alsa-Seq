@@ -1,4 +1,20 @@
-generals = [
+ensaioBoituva_20220312 = [
+    {"name": 'Highway to hell',       "tones": ['PF003', 'PF000']                                             }, # 01
+    {"name": 'Heaven and hell',       "tones": ['PF001', 'CD029'],                     "pd": 'SW'             }, # 02
+    {"name": 'Tears of the d...',     "tones": ['PF008', 'PF006', 'PF001', 'PF000'],   "pd": 'SW'             }, # 03
+    {"name": 'Wicked game',           "tones": ['PF001', 'PF000', 'PF010', 'CD029'],   "pd": 'SW'             }, # 04
+    {"name": 'Girls just want to...', "tones": ['PF005', 'CD006', 'PE002'],            "pd": 'SW'             }, # 05
+    {"name": 'Perfect strangers',     "tones": ['CD022PP', 'CD022PM', 'PA092'],        "pd": 'SW'             }, # 06
+    {"name": 'Sweet child',           "tones": ['PF000', 'CD029', 'CD000'],            "pd": 'SW'             }, # 07
+    {"name": 'Separate ways',         "tones": ['PF007']                                                      }, # 08
+    {"name": 'Nothing else m...',     "tones": ['PF001', 'CD000']                                             }, # 09
+    {"name": 'Mr. Crowley',           "tones": ['PB011', 'CD016', 'CD017'],            "pd": 'SW'             }, # 10
+    {"name": 'Jeremy',                "tones": ['PF000'],                              "pd": '+Y'             }, # 11
+    {"name": 'Maniac',                "tones": ['CD025'],                              "pd": '-Y',  "at": '+Y'}, # 12
+    {"name": 'Love ain\'t no...',     "tones": ['PF008', 'PF000'],                     "pd": 'SW'             }, # 13
+    
+    {"name": 'Always',                "tones": ['CD035'],                              "pd": '-Y',  "at": '+Y'}, # 14
+
     {"name": 'General Tones',         "tones": ['PF000', 'PF001', 'PA020', 'CD000'],   "pd": '-Y',  "at": '+Y'}, # XX
 ]
 
@@ -249,4 +265,8 @@ refugio_20210820 = [
     {"tones": ['PD057', 'PF000'], "name": 'The evil that...', "pd": 'SW'}, # 35
     {"tones": ['CD000', 'PF001', 'PF013'], "name": 'I want out', "pd": 'SW'}, # 36
     {"tones": ['PF001', 'CD029'], "name": 'Heaven and hell', "pd": 'SW'}, # 37
+]
+
+generals = [
+    {"name": 'General Tones',         "tones": ['PF000', 'PF001', 'PA020', 'CD000'],   "pd": '-Y',  "at": '+Y'}, # XX
 ]

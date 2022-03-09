@@ -5,7 +5,7 @@ from GUI import Application
 from CLI import KeyboardManager
 from threadslib import GeneralThread
 
-from songs import area86_20220305 as musicas
+from songs import ensaioBoituva_20220312 as musicas
 
 def main(cable = False):
     manager = SongManager(songs=musicas, cable = cable)
