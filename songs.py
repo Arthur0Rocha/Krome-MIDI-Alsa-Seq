@@ -13,10 +13,11 @@ ensaioBoituva_20220312 = [
     {"name": 'Maniac',                "tones": ['CD025'],                              "pd": '-Y',  "at": '+Y'}, # 12
     {"name": 'Love ain\'t no...',     "tones": ['PF008', 'PF000'],                     "pd": 'SW'             }, # 13
     
+    #TODO check if tone is correct
     {"name": 'Always',                "tones": ['CD035'],                              "pd": '-Y',  "at": '+Y'}, # 14
 
     #TODO - select crushcrushcrush tones
-    {"name": 'Crush...',              "tones": ['PF000'],                              "pd": '-Y',  "at": '+Y'}, # 14
+    {"name": 'Crush...',              "tones": ['PF000'],                              "pd": '-Y',  "at": '+Y'}, # 15
 
     # For roling in the deep
     {"name": 'General Tones',         "tones": ['PF000', 'PF001', 'PA020', 'CD000'],   "pd": '-Y',  "at": '+Y'}, # XX
