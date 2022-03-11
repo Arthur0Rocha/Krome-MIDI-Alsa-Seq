@@ -20,7 +20,7 @@ ensaioBoituva_20220312 = [
     {"name": 'Crush...',              "tones": ['PF000'],                              "pd": '-Y',  "at": '+Y'}, # 15
 
     # For roling in the deep
-    {"name": 'General Tones',         "tones": ['PF000', 'PF001', 'PA020', 'CD000'],   "pd": '-Y',  "at": '+Y'}, # XX
+    {"name": 'General Tones',         "tones": ['PF000', 'CD000', 'PF001', 'PA020'],   "pd": '-Y',  "at": '+Y'}, # -1
 ]
 
 area86_20220305 = [

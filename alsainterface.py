@@ -228,7 +228,7 @@ class ManagerStatus:
         self.updatePdAt()
         self.sendUpdateCommand(sendCPCommand, sendToneCommand)
 
-    def setTone(self, n):
+    def setTone(self, n): #TODO add general tones if outside of original tones list
         if n >= len(self.getTonesList()):
             return
         ctone = self.getCurrentTone()
