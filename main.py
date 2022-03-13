@@ -5,10 +5,10 @@ from GUI import Application
 from CLI import KeyboardManager
 from threadslib import GeneralThread
 
-from songs import ensaioBoituva_20220312 as musicas
+from songs import theWall_20220318 as musicas, generals
 
 def main(cable = False):
-    manager = SongManager(songs=musicas, cable = cable)
+    manager = SongManager(songs=musicas, stdToneList=generals, cable = cable)
 
     CLI = KeyboardManager(commands=manager.getCLICommands())
     GUI = Application(commands=manager.getGUICommands(), closing_callbacks=[CLI.on_close])

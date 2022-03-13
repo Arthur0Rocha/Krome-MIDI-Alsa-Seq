@@ -87,8 +87,9 @@ def sendPM(channel, value):
     aplaymidi(f'midi-files/MIDI.{channel}.{127 if value > 0 else 1}.MID')
 
 class ManagerStatus:
-    def __init__(self, songs, requestSystemUpdate, cable = False):
+    def __init__(self, songs, stdToneList, requestSystemUpdate, cable = False):
         self.songs = songs
+        self.generals = stdToneList
 
         initMIDIFolder()
 
@@ -118,7 +119,10 @@ class ManagerStatus:
         return self.songs[index]['name']
 
     def getCurrentTone(self):
-        return self.getTonesList()[self.currentTone]
+        tonesList = self.getTonesList()
+        if self.currentTone < len(tonesList):
+            return tonesList[self.currentTone]
+        return self.generals[self.currentTone]
 
     def getNextTone(self):
         nextTone = self.currentTone + 1
@@ -228,8 +232,9 @@ class ManagerStatus:
         self.updatePdAt()
         self.sendUpdateCommand(sendCPCommand, sendToneCommand)
 
-    def setTone(self, n): #TODO add general tones if outside of original tones list
-        if n >= len(self.getTonesList()):
+    def setTone(self, n): #TODO test modification
+        # if n >= len(self.getTonesList()):
+        if n > 3:
             return
         ctone = self.getCurrentTone()
         self.currentTone = n
