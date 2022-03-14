@@ -118,7 +118,7 @@ class ManagerStatus:
             index = len(self.songs) - 1
         return self.songs[index]['name']
 
-    def getCurrentTone(self):
+    def getCurrentTone(self): #TODO undo changes
         tonesList = self.getTonesList()
         if self.currentTone < len(tonesList):
             return tonesList[self.currentTone]
@@ -136,7 +136,7 @@ class ManagerStatus:
             previousTone = len(self.getTonesList()) - 1
         return self.getTonesList()[previousTone]
 
-    def getTonesList(self):
+    def getTonesList(self): #TODO Make changes here
         return self.songs[self.currentSong]['tones']
 
     def getSongPD(self):
