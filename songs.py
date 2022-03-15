@@ -10,10 +10,10 @@ theWall_20220318 = [
     {"name": 'Nothing else m...',     "tones": ['PF001', 'CD000']                                             }, # 09
     {"name": 'Mr. Crowley',           "tones": ['PB011', 'CD016', 'CD017'],            "pd": 'SW'             }, # 10
     {"name": 'Jeremy',                "tones": ['PF000'],                              "pd": '+Y'             }, # 11
-    {"name": 'Maniac',                "tones": ['CD025'],                              "pd": '-Y',  "at": '+Y'}, # 12
+    {"name": 'Maniac',                "tones": ['CD025', 'PE001'],                     "pd": '-Y',  "at": '+Y'}, # 12
     {"name": 'Love ain\'t no...',     "tones": ['PF008', 'PF000'],                     "pd": 'SW'             }, # 13
 
-    {"name": 'General Tones',         "tones": ['CD001', 'PF001', 'PF000', 'CD000'],   "pd": '-Y',  "at": '+Y'}, # -1
+    {"name": 'General Tones',         "tones": [],                                     "pd": '-Y',  "at": '+Y'}, # -1
 ]
 
 ensaioBoituva_20220312 = [

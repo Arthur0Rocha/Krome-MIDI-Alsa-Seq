@@ -118,11 +118,8 @@ class ManagerStatus:
             index = len(self.songs) - 1
         return self.songs[index]['name']
 
-    def getCurrentTone(self): #TODO undo changes
-        tonesList = self.getTonesList()
-        if self.currentTone < len(tonesList):
-            return tonesList[self.currentTone]
-        return self.generals[self.currentTone]
+    def getCurrentTone(self): #TODO Test it better
+        return self.getTonesList()[self.currentTone]
 
     def getNextTone(self):
         nextTone = self.currentTone + 1
@@ -136,8 +133,9 @@ class ManagerStatus:
             previousTone = len(self.getTonesList()) - 1
         return self.getTonesList()[previousTone]
 
-    def getTonesList(self): #TODO Make changes here
-        return self.songs[self.currentSong]['tones']
+    def getTonesList(self): #TODO Test it better
+        originalTones = self.songs[self.currentSong]['tones']
+        return originalTones + list(filter(lambda tone: tone not in originalTones, self.generals))[-(4-len(originalTones)):]
 
     def getSongPD(self):
         pd = '-Y'
