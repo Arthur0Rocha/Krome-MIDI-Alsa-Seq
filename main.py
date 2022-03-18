@@ -5,10 +5,10 @@ from GUI import Application
 from CLI import KeyboardManager
 from threadslib import GeneralThread
 
-from songs import theWall_minimal as musicas, generals
+from songs import theWall_minimal as musicas1, theWall_20220318 as musicas2, generals
 
-def main(cable = False):
-    manager = SongManager(songs=musicas, stdToneList=generals['tones'], cable = cable)
+def main(cable = False, set2=False):
+    manager = SongManager(songs=musicas2 if set2 else musicas1, stdToneList=generals['tones'], cable = cable)
 
     CLI = KeyboardManager(commands=manager.getCLICommands())
     GUI = Application(commands=manager.getGUICommands(), closing_callbacks=[CLI.on_close])
@@ -24,4 +24,5 @@ def main(cable = False):
     
 if __name__ == "__main__":
     cable = 'cable' in sys.argv
-    main(cable)
+    set2 = '2' in sys.argv
+    main(cable, set2)
