@@ -1,23 +1,23 @@
 theWall_minimal = [
     {"name": 'Girls Maniac',          "tones": ['PF005', 'CD006', 'CD025', 'PE001'],   "pd": '-Y',  "at": '+Y'}, # 01
-    {"name": 'STR AHH EP ORG',        "tones": ['PF001', 'CD029', 'PF000', 'PA092'],   "pd": '-Y',  "at": '+Y'}, # 02
-    {"name": 'Love-1-2 Heavy Sepa',   "tones": ['PF008', 'PF000', 'CD000', 'PF007'],   "pd": '-Y',  "at": '+Y'}, # 03
+    {"name": 'STR AHH EP HEAVY',      "tones": ['PF001', 'CD029', 'PF000', 'CD000'],   "pd": '-Y',  "at": '+Y'}, # 02
+    {"name": 'Sepa Love-1-2 ORG',     "tones": ['PF007', 'PF008', 'PF000', 'PA092'],   "pd": '-Y',  "at": '+Y'}, # 03
 ]
 
 theWall_20220318 = [
-    {"name": 'Highway to hell',       "tones": ['PF003', 'PF000']                                             }, # 01
-    {"name": 'Heaven and hell',       "tones": ['PF001', 'CD029'],                     "pd": 'SW'             }, # 02
-    {"name": 'Tears of the d...',     "tones": ['PF008', 'PF006', 'PF001', 'PF000'],   "pd": 'SW'             }, # 03
-    {"name": 'Wicked game',           "tones": ['PF001', 'PF000', 'PF010', 'CD029'],   "pd": 'SW'             }, # 04
-    {"name": 'Girls just want to...', "tones": ['PF005', 'CD006', 'PE002'],            "pd": 'SW'             }, # 05
-    {"name": 'Perfect strangers',     "tones": ['CD022PP', 'CD022PM', 'PA092'],        "pd": 'SW'             }, # 06
-    {"name": 'Sweet child',           "tones": ['PF000', 'CD029', 'CD000'],            "pd": 'SW'             }, # 07
-    {"name": 'Separate ways',         "tones": ['PF007']                                                      }, # 08
-    {"name": 'Nothing else m...',     "tones": ['PF001', 'CD000']                                             }, # 09
-    {"name": 'Mr. Crowley',           "tones": ['PB011', 'CD016', 'CD017'],            "pd": 'SW'             }, # 10
-    {"name": 'Jeremy',                "tones": ['PF000'],                              "pd": '+Y'             }, # 11
-    {"name": 'Maniac',                "tones": ['CD025', 'PE001'],                     "pd": '-Y',  "at": '+Y'}, # 12
-    {"name": 'Love ain\'t no...',     "tones": ['PF008', 'PF000'],                     "pd": 'SW'             }, # 13
+    {"name": 'Perfect strangers',     "tones": ['CD022PP', 'CD022PM', 'PA092'],        "pd": 'SW'             }, # 01
+    {"name": 'Wicked game',           "tones": ['PF001', 'PF000', 'PF010', 'CD029'],   "pd": 'SW'             }, # 02
+    {"name": 'Jeremy',                "tones": ['PF000'],                              "pd": '+Y'             }, # 03
+    {"name": 'Girls just want to...', "tones": ['PF005', 'CD006', 'PE002'],            "pd": 'SW'             }, # 04
+    {"name": 'Tears of the d...',     "tones": ['PF008', 'PF006', 'PF001', 'PF000'],   "pd": 'SW'             }, # 05
+    {"name": 'Separate ways',         "tones": ['PF007']                                                      }, # 06
+    {"name": 'Maniac',                "tones": ['CD025', 'PE001'],                     "pd": '-Y',  "at": '+Y'}, # 07
+    {"name": 'Nothing else m...',     "tones": ['PF001', 'CD029', 'CD000']                                    }, # 08
+    {"name": 'Highway to hell',       "tones": ['PA092', 'PF000']                                             }, # 09
+    {"name": 'Love ain\'t no...',     "tones": ['PF008', 'PF000'],                     "pd": 'SW'             }, # 10
+    {"name": 'Sweet child',           "tones": ['PF000', 'CD029', 'CD000'],            "pd": 'SW'             }, # 11
+    {"name": 'Heaven and hell',       "tones": ['PF001', 'CD029'],                     "pd": 'SW'             }, # 12
+    {"name": 'Mr. Crowley',           "tones": ['PB011', 'CD016', 'CD017'],            "pd": 'SW'             }, # 13
 
     {"name": 'General Tones',         "tones": [],                                     "pd": '-Y',  "at": '+Y'}, # -1
 ]
