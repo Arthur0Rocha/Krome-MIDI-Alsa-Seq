@@ -135,7 +135,7 @@ class ManagerStatus:
 
     def getTonesList(self): #TODO Test it better
         originalTones = self.songs[self.currentSong]['tones']
-        return originalTones + list(filter(lambda tone: tone not in originalTones, self.generals))[-(4-len(originalTones)):]
+        return originalTones + list(filter(lambda tone: tone not in originalTones, self.generals))[len(originalTones):]
 
     def getSongPD(self):
         pd = '-Y'
