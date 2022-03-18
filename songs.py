@@ -1,3 +1,9 @@
+theWall_minimal = [
+    {"name": 'Girls Maniac',          "tones": ['PF005', 'CD006', 'CD025', 'PE001'],   "pd": '-Y',  "at": '+Y'}, # 01
+    {"name": 'STR AHH EP ORG',        "tones": ['PF001', 'CD029', 'PF000', 'PA092'],   "pd": '-Y',  "at": '+Y'}, # 02
+    {"name": 'Love Heavy Separate',   "tones": ['PF008', 'PF000', 'CD000', 'PF007'],   "pd": '-Y',  "at": '+Y'}, # 03
+]
+
 theWall_20220318 = [
     {"name": 'Highway to hell',       "tones": ['PF003', 'PF000']                                             }, # 01
     {"name": 'Heaven and hell',       "tones": ['PF001', 'CD029'],                     "pd": 'SW'             }, # 02
