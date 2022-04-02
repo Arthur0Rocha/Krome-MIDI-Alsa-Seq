@@ -5,7 +5,7 @@ from GUI import Application
 from CLI import KeyboardManager
 from threadslib import GeneralThread
 
-from songs import theWall_minimal as musicas1, theWall_20220318 as musicas2, generals
+from songs import casamento_20220409 as musicas1, theWall_minimal as musicas2, generals
 
 def main(cable = False, set2=False):
     manager = SongManager(songs=musicas2 if set2 else musicas1, stdToneList=generals['tones'], cable = cable)
