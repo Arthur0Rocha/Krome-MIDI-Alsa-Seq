@@ -1,22 +1,23 @@
 casamento_20220409 = [
-    {"name": 'Girls just want to...', "tones": ['PF005', 'CD006', 'PE002'],            "pd": 'SW'             }, # 01
-    {"name": 'Maniac',                "tones": ['CD025', 'PE001'],                     "pd": '-Y',  "at": '+Y'}, # 02
-    {"name": 'Numb',                  "tones": ['CD028', 'PA020', 'PF001', 'CD001PM'], "pd": 'SW'             }, # 03
-    {"name": 'Take on me',            "tones": ['CD026']                                                      }, # 04
-    {"name": 'Love ain\'t no...',     "tones": ['PF008', 'PF000'],                     "pd": 'SW'             }, # 05
-    {"name": 'Highway to hell',       "tones": ['PA092', 'PF000']                                             }, # 06
-    {"name": 'Man in the box',        "tones": ['PF011', 'CD029'],                     "pd": 'SW'             }, # 07
-    {"name": 'The trooper',           "tones": ['PF000'],                              "pd": 'SW'             }, # 08
-    {"name": 'Whats up',              "tones": ['PF000', 'PE001'],                     "pd": 'SW'             }, # 09
-    {"name": 'My sacrifice',          "tones": ['PF000']                                                      }, # 10
-    {"name": 'It\'s my life',         "tones": ['CD020', 'PD084'],                     "pd": 'SW'             }, # 11
-    {"name": 'Crush...',              "tones": ['PA019', 'CD029', 'PF001', 'PD014'],   "pd": 'SW',  "at": '+Y'}, # 12
-    {"name": 'Admirável chip...',     "tones": ['PF001'],                              "pd": '-Y',  "at": '+Y'}, # 13
+    {"name": 'Admirável chip...',     "tones": ['PF001'],                              "pd": '-Y',  "at": '+Y'}, # 01
+    {"name": 'Take on me',            "tones": ['CD026']                                                      }, # 02
+    {"name": 'Maniac',                "tones": ['CD025', 'PE001'],                     "pd": '-Y',  "at": '+Y'}, # 03
+    {"name": 'Whats up',              "tones": ['PF000', 'PE001'],                     "pd": 'SW'             }, # 04
+    {"name": 'Girls just want to...', "tones": ['PF005', 'CD006', 'PE002'],            "pd": 'SW'             }, # 05
+    {"name": 'Man in the box',        "tones": ['PF011', 'CD029'],                     "pd": 'SW'             }, # 06
+    {"name": 'Numb',                  "tones": ['CD028', 'PA020', 'PF001', 'CD001PM'], "pd": 'SW'             }, # 07
+    {"name": 'My sacrifice',          "tones": ['PF000']                                                      }, # 08
+    {"name": 'Máscara',               "tones": ['PF001', 'CD001'],                     "pd": 'VOL', "at": '+Y'}, # 09
+    {"name": 'Crush...',              "tones": ['PA019', 'CD029', 'PF001', 'PD014'],   "pd": 'SW',  "at": '+Y'}, # 10
+    {"name": 'Rolling in the deep',   "tones": ['PF002']                                                      }, # 11
+    {"name": 'Love ain\'t no...',     "tones": ['PF008', 'PF000'],                     "pd": 'SW'             }, # 12
+    {"name": 'Separate ways',         "tones": ['PF007']                                                      }, # 13
     {"name": 'Always',                "tones": ['CD035'],                              "pd": '-Y',  "at": '+Y'}, # 14
-    {"name": 'Rolling in the deep',   "tones": ['PF002']                                                      }, # 15
-    {"name": 'Separate ways',         "tones": ['PF007']                                                      }, # 16
+    {"name": 'It\'s my life',         "tones": ['CD020', 'PD084'],                     "pd": 'SW'             }, # 15
+    {"name": 'The trooper',           "tones": ['PF000'],                              "pd": 'SW'             }, # 16
+    {"name": 'Highway to hell',       "tones": ['PA092', 'PF000']                                             }, # 17
 
-    {"name": 'I don\'t wanna m...',   "tones": ['CD027']                                                      }, # 17
+    {"name": 'I don\'t wanna m...',   "tones": ['CD027']                                                      }, # 18
 ]
 
 theWall_minimal = [
