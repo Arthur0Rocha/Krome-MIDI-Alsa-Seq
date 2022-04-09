@@ -8,7 +8,7 @@ casamento_20220409 = [
     {"name": 'Numb',                  "tones": ['CD028', 'PA020', 'PF001', 'CD001PM'], "pd": 'SW'             }, # 07
     {"name": 'My sacrifice',          "tones": ['PF000']                                                      }, # 08
     {"name": 'Máscara',               "tones": ['PF001', 'CD001'],                     "pd": 'VOL', "at": '+Y'}, # 09
-    {"name": 'Crush...',              "tones": ['PA019', 'CD029', 'PF001', 'PD014'],   "pd": 'SW',  "at": '+Y'}, # 10
+    {"name": 'Crush...',              "tones": ['PF021', 'CD036'],                     "pd": 'SW',  "at": '+Y'}, # 10
     {"name": 'Rolling in the deep',   "tones": ['PF002']                                                      }, # 11
     {"name": 'Love ain\'t no...',     "tones": ['PF008', 'PF000'],                     "pd": 'SW'             }, # 12
     {"name": 'Separate ways',         "tones": ['PF007']                                                      }, # 13
