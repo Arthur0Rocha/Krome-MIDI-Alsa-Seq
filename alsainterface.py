@@ -1,6 +1,8 @@
 import alsaseq
 import os
 
+# TODO add SEQ MODE capabilities
+
 def aplaymidi(filename, delay=0):
     os.system(f'aplaymidi -p KROME -d {delay} {filename}')
 

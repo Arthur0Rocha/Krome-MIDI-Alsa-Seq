@@ -1,4 +1,4 @@
-area86_20220506 = [
+casaAmarela20220513 = [
     # Parte 1
     {"name": 'Stay',                  "tones": ['PF020', 'PF019', 'PF018']                                    }, # 01    
     {"name": 'Everybody wants...',    "tones": ['CD031']                                                      }, # 02
@@ -39,6 +39,8 @@ area86_20220506 = [
     {"name": 'Always',                "tones": ['CD035', 'PA092'],                     "pd": '-Y',  "at": '+Y'}, # 35                    
     {"name": 'Highway to hell',       "tones": ['PA092', 'PF000']                                             }, # 36
 ]
+
+area86_20220506 = casaAmarela20220513
 
 casamento_20220409 = [
     {"name": 'Admirável chip...',     "tones": ['PF001'],                              "pd": '-Y',  "at": '+Y'}, # 01
