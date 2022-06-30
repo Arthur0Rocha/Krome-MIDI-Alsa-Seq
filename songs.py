@@ -1,3 +1,46 @@
+r2v2_20220701 = [
+    {"name": 'Everybody wants...',    "tones": ['CD031']                                                          }, # 01
+    {"name": 'Girls just want to...', "tones": ['PF005', 'CD006', 'PE002'],             "pd": 'SW'                }, # 02
+    {"name": 'Maniac',                "tones": ['CD025', 'PE001'],                      "pd": '-Y',     "at": '+Y'}, # 03
+    {"name": 'Jeremy',                "tones": ['PF000'],                               "pd": '+Y'                }, # 04
+    {"name": 'Nothing else m...',     "tones": ['PF001', 'CD029', 'CD000']                                        }, # 05
+    {"name": 'Separate ways',         "tones": ['PF007']                                                          }, # 06        
+    {"name": 'My sacrifice',          "tones": ['PF000', 'PA092']                                                 }, # 07
+    {"name": 'Numb',                  "tones": ['CD028', 'PA020', 'PF001', 'CD001PM'],  "pd": 'SW'                }, # 08
+    {"name": 'Always',                "tones": ['CD035', 'PA092'],                      "pd": '-Y',     "at": '+Y'}, # 09                    
+    {"name": 'Perfect strangers',     "tones": ['CD022PP', 'CD022PM', 'PA092'],         "pd": 'SW'                }, # 10
+    #
+    {"name": 'Bring me to life',      "tones": ['CD001', 'PF001'],                      "pd": 'SW'                }, # 11
+    {"name": 'Going Under',           "tones": ['PF001', 'CD029'],                      "pd": 'SW'                }, # 12
+    {"name": 'Tourniquet',            "tones": ['PF001', 'CD029'],                      "pd": 'SW'                }, # 13
+    {"name": 'Imaginary',             "tones": ['PF001', 'CD001'],                      "pd": 'SW'                }, # 14
+    {"name": 'My Immortal',           "tones": ['PA020'],                               "pd": 'SW'                }, # 15
+    {"name": 'Lithium',               "tones": ['PF002', 'PF001'],                      "pd": 'SW'                }, # 16
+    {"name": 'Taking over me',        "tones": ['CD001', 'PF001'],                      "pd": 'SW'                }, # 17
+    {"name": 'Sweet Sacrifice',       "tones": ['PF001'],                               "pd": 'SW'                }, # TODO 18
+    {"name": 'Broken',                "tones": ['PF000', 'PF001'],                      "pd": 'SW'                }, # 19
+    {"name": 'What you want',         "tones": ['PF001', 'PF012'],                      "pd": 'SW'                }, # 20
+    {"name": 'Call me',               "tones": ['PF002', 'PF001', 'PF003'],             "pd": 'SW'                }, # 21 # (['CD002PMM', 'CD002MPM', 'CD002MMP'], 'Call me'),
+    {"name": 'Everybody\'s fool',     "tones": ['CD029'],                               "pd": 'SW'                }, # 22
+    #
+    {"name": 'Admirável chip...',     "tones": ['PF001'],                               "pd": '-Y',     "at": '+Y'}, # 23
+    {"name": 'Memórias',              "tones": ['PF000', 'CD029'],                      "pd": '-Y',     "at": '+Y'}, # 24
+    {"name": 'Déjà vu',               "tones": ['PF000', 'CD029'],                      "pd": '-Y',     "at": '+Y'}, # 25
+    {"name": 'Eu quero sempre',       "tones": ['PF004', 'PF003', 'PF001'],             "pd": '-Y',     "at": '+Y'}, # 26
+    {"name": 'Máscara',               "tones": ['PF001'],                               "pd": 'VOL',    "at": '+Y'}, # 27
+    {"name": 'Anacrônico',            "tones": ['CD022', 'PF001'],                      "pd": '-Y',     "at": '+Y'}, # 28
+    {"name": 'Pulsos',                "tones": ['PF000'],                               "pd": '-Y',     "at": '+Y'}, # 29
+    {"name": 'Me adora',              "tones": ['PF000', 'CD029'],                      "pd": '-Y',     "at": '+Y'}, # 30
+    {"name": 'Equalize',              "tones": ['PF000', 'PF003'],                      "pd": '-Y',     "at": '+Y'}, # 31
+    {"name": 'Na sua estante',        "tones": ['PD020', 'CD001'],                      "pd": '-Y',     "at": '+Y'}, # 32
+    {"name": 'Semana que vem',        "tones": ['CD029'],                               "pd": '-Y',     "at": '+Y'}, # 33
+    {"name": 'I wanna be',            "tones": ['PF000'],                               "pd": '-Y',     "at": '+Y'}, # 34
+    {"name": 'Teto de vidro',         "tones": ['CD006', 'PF001', 'CD029'],             "pd": 'SW',     "at": '+Y'}, # 35
+    #
+    {"name": 'Emboscada',             "tones": ['PF000'],                               "pd": '-Y',     "at": '+Y'}, # 36
+    {"name": 'Temporal',              "tones": ['PF004', 'PE039'],                      "pd": '-Y',     "at": '+Y'}, # 37
+]
+
 casaAmarela20220513 = [
     # Parte 1
     {"name": 'Stay',                  "tones": ['PF020', 'PF019', 'PF018']                                    }, # 01    
