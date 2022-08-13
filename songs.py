@@ -8,7 +8,7 @@ niver_re_20220813 = [ # Casa amarela
     {"name": 'In between days',       "tones": ['PF001']                                                          }, # 07
     {"name": 'Everybody wants...',    "tones": ['CD031']                                                          }, # 08
     {"name": 'Zombie',                "tones": ['CD001PM', 'PA020']                                               }, # 09
-    {"name": 'Silent morning',        "tones": ['PF000', 'PF008', 'PF010'],             "pd": '-Y',     "at": '+Y'}, # 10
+    {"name": 'Silent morning',        "tones": ['PF000', 'PF008', 'PF010', 'PF009'],    "pd": '-Y',     "at": '+Y'}, # 10
     {"name": 'Bring me to life',      "tones": ['CD001', 'PF001'],                      "pd": 'SW'                }, # 11
     {"name": 'Jeremy',                "tones": ['PF000'],                               "pd": '+Y'                }, # 12
     {"name": 'The final count...',    "tones": ['CD018']                                                          }, # 13
@@ -16,7 +16,7 @@ niver_re_20220813 = [ # Casa amarela
     {"name": 'Numb',                  "tones": ['CD028', 'PA020', 'PF001', 'CD001PM'],  "pd": 'SW'                }, # 15
     {"name": 'Girls just want to...', "tones": ['PF005', 'CD006', 'PE002'],             "pd": 'SW'                }, # 16
     {"name": 'Tears of the d...',     "tones": ['PF008', 'PF006', 'PF001', 'PF000'],    "pd": 'SW'                }, # 17
-    {"name": 'Blinding lights',       "tones": ['CD006', 'PF008', 'PF010'],             "pd": '-Y',     "at": '+Y'}, # 18
+    {"name": 'Blinding lights',       "tones": ['CD006', 'PF008', 'PF010', 'PF009'],    "pd": '-Y',     "at": '+Y'}, # 18
     {"name": 'I want out',            "tones": ['CD000', 'PF001', 'PF013'],             "pd": '-Y',     "at": '+Y'}, # 19
     {"name": 'Wasting love',          "tones": ['PF001', 'CD001PM', 'PF000']                                      }, # 31
     {"name": 'I don\'t wanna m...',   "tones": ['CD027']                                                          }, # 21
