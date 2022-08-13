@@ -1,3 +1,41 @@
+niver_re_20220813 = [ # Casa amarela
+    {"name": 'Machine head',          "tones": ['PF000', 'CD000']                                                 }, # 01
+    {"name": 'Stay',                  "tones": ['PF020', 'PF019', 'PF018']                                        }, # 02
+    {"name": 'Take on me',            "tones": ['CD026']                                                          }, # 03
+    {"name": 'Rolling in the deep',   "tones": ['PF002']                                                          }, # 04
+    {"name": 'In between days',       "tones": ['PF001']                                                          }, # 05
+    {"name": 'Zombie',                "tones": ['CD001PM', 'PA020']                                               }, # 06
+    {"name": 'The final count...',    "tones": ['CD018']                                                          }, # 07
+    {"name": 'My sacrifice',          "tones": ['PF000', 'PA092']                                                 }, # 08
+    {"name": 'Numb',                  "tones": ['CD028', 'PA020', 'PF001', 'CD001PM'],  "pd": 'SW'                }, # 09
+    {"name": 'Everybody wants...',    "tones": ['CD031']                                                          }, # 10
+    {"name": 'Girls just want to...', "tones": ['PF005', 'CD006', 'PE002'],             "pd": 'SW'                }, # 11
+    {"name": 'Whats up',              "tones": ['PF000', 'PE001'],                      "pd": 'SW'                }, # 12
+    {"name": 'Tears of the d...',     "tones": ['PF008', 'PF006', 'PF001', 'PF000'],    "pd": 'SW'                }, # 13
+    {"name": 'I want out',            "tones": ['CD000', 'PF001', 'PF013'],             "pd": '-Y',     "at": '+Y'}, # 14
+    {"name": 'Silent morning',        "tones": ['PF000', 'PF008', 'PF010'],             "pd": '-Y',     "at": '+Y'}, # 15
+    {"name": 'Blinding lights',       "tones": ['CD006', 'PF008', 'PF010'],             "pd": '-Y',     "at": '+Y'}, # 16
+    {"name": 'Separate ways',         "tones": ['PF007']                                                          }, # 17
+    {"name": 'Bring me to life',      "tones": ['CD001', 'PF001'],                      "pd": 'SW'                }, # 18
+    {"name": 'Jeremy',                "tones": ['PF000'],                               "pd": '+Y'                }, # 19
+    {"name": 'Wasting love',          "tones": ['PF001', 'CD001PM', 'PF000']                                      }, # 31
+    {"name": 'I don\'t wanna m...',   "tones": ['CD027']                                                          }, # 21
+    {"name": 'Always',                "tones": ['CD035', 'PA092'],                      "pd": '-Y',     "at": '+Y'}, # 22
+    {"name": 'Admirável chip...',     "tones": ['PF001'],                               "pd": '-Y',     "at": '+Y'}, # 23
+    {"name": 'Memórias',              "tones": ['PF000', 'CD029'],                      "pd": '-Y',     "at": '+Y'}, # 24
+    {"name": 'Déjà vu',               "tones": ['PF000', 'CD029'],                      "pd": '-Y',     "at": '+Y'}, # 25
+    {"name": 'Eu quero sempre',       "tones": ['PF004', 'PF003', 'PF001'],             "pd": '-Y',     "at": '+Y'}, # 26
+    {"name": 'Máscara',               "tones": ['PF001'],                               "pd": 'VOL',    "at": '+Y'}, # 27
+    {"name": 'Anacrônico',            "tones": ['CD022', 'PF001'],                      "pd": '-Y',     "at": '+Y'}, # 28
+    {"name": 'Pulsos',                "tones": ['PF000'],                               "pd": '-Y',     "at": '+Y'}, # 29
+    {"name": 'Me adora',              "tones": ['PF000', 'CD029'],                      "pd": '-Y',     "at": '+Y'}, # 30
+    {"name": 'Equalize',              "tones": ['PF000', 'PF003'],                      "pd": '-Y',     "at": '+Y'}, # 31
+    {"name": 'Na sua estante',        "tones": ['PD020', 'CD001'],                      "pd": '-Y',     "at": '+Y'}, # 32
+    {"name": 'Semana que vem',        "tones": ['CD029'],                               "pd": '-Y',     "at": '+Y'}, # 33
+    {"name": 'I wanna be',            "tones": ['PF000'],                               "pd": '-Y',     "at": '+Y'}, # 34
+    {"name": 'Teto de vidro',         "tones": ['CD006', 'PF001', 'CD029'],             "pd": 'SW',     "at": '+Y'}, # 35
+]
+
 r2v2_20220701 = [
     {"name": 'Everybody wants...',    "tones": ['CD031']                                                          }, # 01
     {"name": 'Girls just want to...', "tones": ['PF005', 'CD006', 'PE002'],             "pd": 'SW'                }, # 02

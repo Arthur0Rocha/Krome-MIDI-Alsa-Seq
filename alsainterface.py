@@ -17,6 +17,8 @@ def makeConnections( cable = False):
     aconnect("\"Vortex Wireless 2\"", "Arthur SEQ")
     aconnect("KROME", "Arthur SEQ")
     aconnect("\"Arthur SEQ\":1", "KROME")
+    aconnect("SINCO", "SINCO-KROME-REMAP")
+    aconnect("\"SINCO-KROME-REMAP\":1", "Arthur SEQ")
 
 def midiSysEx(sysEx):
         message = [sysEx[0], len(sysEx) - 1] + sysEx[1:]
